@@ -1,0 +1,112 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
+
+  @media (min-width: $large-breakpoint) {
+  font-size: $large-font-size;
+  }
+}
+
+body {
+  color: $text;
+  background-color: $bg;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  ::selection {
+  background: #ff453a;
+  }
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-text;
+  background-color: $light-scheme-bg;
+  ::selection {
+  background: #2eb1c6;
+  }
+  }
+}
+
+// No `:visited` state is required by default (browsers will use `a`)
+a {
+  color: $accent;
+  text-decoration: underline;
+  text-underline-offset: 0.325em;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-accent;
+  }
+
+  // `:focus` is linked to `:hover` for basic accessibility
+  &:hover,
+  &:focus {
+  text-decoration: underline;
+  }
+
+  strong {
+  color: inherit;
+  }
+}
+
+/* --- Navigation Link Styles --- */
+nav a {
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+  text-decoration: none;
+  }
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+}
+
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1.5px solid $header;
+  border-collapse: collapse;
+
+  @media (prefers-color-scheme: light) {
+  border: 1.5px solid $light-scheme-header;
+  }
+}
+
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px dashed $header;
+
+  @media (prefers-color-scheme: light) {
+  border: 1px dashed $light-scheme-header;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: $bg;
+
+  @media (prefers-color-scheme: light) {
+  background-color: $light-scheme-bg;
+  }
+}

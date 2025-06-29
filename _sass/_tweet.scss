@@ -1,0 +1,17 @@
+.tweet {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 300;
+  margin-bottom: 15px;
+  padding: 20px 40px;
+  color: $text;
+  background-color: #242424;
+  border: .1rem solid #626162;
+  border-radius: 40px;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-text;
+  background-color: #f9f9f9;
+  border: .1rem solid #acabaa;
+  }
+}

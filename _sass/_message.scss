@@ -1,0 +1,104 @@
+// Messages
+
+// Example message box
+// <p class="message-yellow"><small><b>Warning!</b> This is a sentence inside of a message box.</small></p>
+
+// Example with close button
+// <p class="message-yellow"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+// <small><b>Warning!</b> This is a sentence inside of a message box.</small></p>
+
+.message {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: $text;
+  background-color: $message-default;
+  border: .1rem solid #00c2bb;
+  border-radius: .5em;
+  text-align: center;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-text;
+  background-color: $message-light;
+  border: .1rem solid #d2d2d2;
+  }
+}
+
+.black {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-black;
+  border-left: .3rem solid #595959;
+  border-radius: .5em;
+}
+
+.green {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-green;
+  border-left: .3rem solid #93d080;
+  border-radius: .5em;
+}
+
+.yellow {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-yellow;
+  border-left: .3rem solid #fdcb61;
+  border-radius: .5em;
+}
+
+.orange {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-orange;
+  border-left: .3rem solid #f9ac6b;
+  border-radius: .5em;
+}
+
+.red {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-red;
+  border-left: .3rem solid #e86c71;
+  border-radius: .5em;
+}
+
+.purple {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-purple;
+  border-left: .3rem solid #bf61c0;
+  border-radius: .5em;
+}
+
+.blue {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-blue;
+  border-left: .3rem solid #2bc2ff;
+  border-radius: .5em;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 27px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}

@@ -1,0 +1,46 @@
+.container {
+  max-width: 38rem;
+  padding-left:  1.5rem;
+  padding-right: 1.5rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+footer {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 85%;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  div {
+  flex: 1 1 0;
+
+  &:first-child {
+  padding-right: 0.5em;
+  }
+
+  &:last-child {
+  padding-left: 0.5em;
+  text-align: right;
+  }
+ }
+}
+
+.unsighted {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}

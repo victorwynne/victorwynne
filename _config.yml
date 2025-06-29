@@ -1,0 +1,41 @@
+title: Victor Wynne
+tagline:
+description: A self-authored blog with insightful commentary on topics such as software development, technology, business, science, and global politics.
+url: https://victorwynne.com
+baseurl: ""
+permalink: :title/
+
+timezone: America/New_York
+
+kramdown:
+    footnote_backlink: "&#10548;"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-target-blank
+
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+author:
+  name: Victor Wynne
+  url: https://victorwynne.com
+  email: hello@victorwynne.com
+
+version: 1.4.0
+github:
+  repo: https://github.com/victorwynne/quattle/
+
+# Feed
+name: Victor Wynne
+url: https://victorwynne.com

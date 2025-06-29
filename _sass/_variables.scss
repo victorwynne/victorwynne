@@ -1,0 +1,62 @@
+// Color schemes for light and dark mode
+
+$bg: #000000;
+$text: #dddddd;
+$accent: #39b4ad;
+$header: #969696;
+$header-before: #969696;
+$meta: #969696;
+$element: #39b4ad;
+$blockquote: #555555;
+$blockquote-bg: #141414;
+$hr: #3b3b3b;
+$tag-bg: #141414;
+$tag-border: #555555;
+
+$light-scheme-bg: #f7f6f4;
+$light-scheme-text: #404040;
+$light-scheme-accent: #4846AF;
+$light-scheme-header: #545454;
+$light-scheme-header-before: #545454;
+$light-scheme-meta: #545454;
+$light-scheme-element: #4846AF;
+$light-scheme-blockquote: #9d9d9d;
+$light-scheme-blockquote-bg: #e6e6e6;
+$light-scheme-hr: #cdcccb;
+$light-scheme-tag-bg: #e6e6e6;
+$light-scheme-tag-border: #9d9d9d;
+
+$code-inline: #ffffff;
+$code-inline-bg: rgba(33, 34, 40, 1);
+$code-block-accent: #c24a45;
+$code-block-bg: rgba(33, 34, 40, 1);
+$code-border: #c24a45;
+
+$code-inline-light: #343434;
+$code-inline-bg-light: #eae9e7;
+$code-block-accent-light: #2eb1a1;
+$code-block-bg-light: rgba(49, 50, 59, 1);
+$code-border-light: #ACACAC;
+
+$notice: #323332;
+$notice-green: #002d2b;
+$notice-yellow: #292006;
+$notice-orange: #260E02;
+
+$message-default: #002d2b;
+$message-light: #F8F8F8;
+$message-black: #282828;
+$message-green: #62bb47;
+$message-yellow: #fcb827;
+$message-orange: #f6821f;
+$message-red: #e03940;
+$message-purple: #953c96;
+$message-blue: #009ddc;
+
+$root-font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$code-font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$root-font-size: 17px;
+$root-line-height: 1.7;
+
+$large-breakpoint: 38em;
+$large-font-size: 1.25em;

@@ -1,0 +1,21 @@
+{
+  "name": "Victor Wynne",
+  "short_name": "Victor Wynne",
+  "description": "A self-authored blog with insightful commentary on topics such as software development, technology, business, science, and global politics.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#39b4ad",
+  "icons": [
+    {
+      "src": "/assets/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

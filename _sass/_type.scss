@@ -1,0 +1,225 @@
+// Typography
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  color: $header;
+  position: relative;
+  text-decoration: none;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-header;
+  }
+}
+
+h4::before {
+  content: "#";
+  color: $header-before;
+  left: -1em;
+  top: 0;
+	position: absolute;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-header-before;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: $text;
+    
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-text;
+  }
+}
+
+.info-line {
+  margin-bottom: 1.6rem;
+}
+
+h4 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul, ol, dl {
+  margin-top: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 0.85px solid $hr;
+  border-bottom: 0.85px solid $hr;
+  opacity: 1;
+
+  @media (prefers-color-scheme: light) {
+  border-top: 0.85px solid $light-scheme-hr;
+  border-bottom: 0.85px solid $light-scheme-hr;
+  opacity: 1;
+  }
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  opacity: .5;
+  color: $text;
+  text-transform: uppercase;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-text;
+  }
+
+  &[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+  }
+}
+
+span.link-arrow {
+  color: $element;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-element;
+  }
+}
+
+blockquote {
+  width: 100%;
+  background-color: $blockquote-bg;
+  padding: 20px 20px 20px 22px;
+  margin: 20px 0;
+  font-size: 92%;
+  position: relative;
+  border-left: 2px solid $blockquote;
+  border-radius: .5em;
+
+  @media (prefers-color-scheme: light) {
+  background-color: $light-scheme-blockquote-bg;
+  border-left: 2px solid $light-scheme-blockquote;
+  }
+
+  p:last-child {
+  margin-bottom: 0;
+  }
+
+  @media (min-width: 30em) {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+mark {
+  background: $accent;
+  color: $light-scheme-text;
+	padding: 2px 2px;
+
+  @media (prefers-color-scheme: light) {
+  background: $light-scheme-accent;
+  color: $text;
+  }
+}
+
+// Footnote number within body text
+a[href^="#fn:"] {
+  display: inline-block;
+  position: relative;
+  font-size: 95%;
+  font-weight: bold;
+  min-width: 45px;
+  margin: 0 0.2em 0 0.2em;
+  text-align: center;
+  color: $accent;
+  border: 1.5px solid $blockquote;
+  border-radius: 1em;
+  vertical-align: middle;
+  text-decoration: none;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-accent;
+  border: 1.5px solid $light-scheme-blockquote;
+  }
+}
+
+// Back to footnote link
+a[href^="#fnref:"] {
+  display: inline-block;
+  margin-left: .1rem;
+  font-weight: bold;
+  padding: 0.1em 0.1em 0.1em;
+}
+
+// List of footnotes
+.footnotes {
+  margin-top: 2rem;
+  font-size: 80%;
+
+:target {
+	padding: 6px;
+  border: solid 1.5px $blockquote;
+
+  @media (prefers-color-scheme: light) {
+  border: solid 1.5px $light-scheme-blockquote;
+  }
+ }
+}
+
+.reversefootnote {
+ text-decoration: none;
+ color: $accent;
+
+ @media (prefers-color-scheme: light) {
+ color: $light-scheme-accent;
+ }
+}
+
+// Custom type
+//
+// Extend paragraphs with `.lead` for larger introductory text.
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: $text;
+
+  @media (prefers-color-scheme: light) {
+  color: $light-scheme-text;
+  }
+}

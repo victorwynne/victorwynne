@@ -1,0 +1,22 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+
+{% for post in site.posts limit:19 %}
+<nav>
+<article class="post">
+  <h2 class="post-title"><a href="{{ post.url }}">{{ post.title | smartify }}</a></h2>
+  <br>
+
+</article>
+</nav>
+{% endfor %}
+
+</div>
+
+<br>
+<h3>You can find all the older posts in the <a href="/vault/">vault</a>.</h3>
+<br>
