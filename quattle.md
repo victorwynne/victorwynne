@@ -41,7 +41,7 @@ Smart quotes across all content with the `{ | smartify }` liquid filter
 
 Rich preview links when shared via messaging and social media services
 
-A variety of elements commonly used in writing web content have been [styled](https://victorwynne.com/styles/): lede, citation highlighting, source references, blockquotes, headers, tables, definition lists, figure captions, inline code, code blocks, social media posts, footnotes, and message boxes with optional close button
+A variety of elements commonly used in writing web content have been [styled](https://victorwynne.com/styles/): lede, citation highlighting, source references, blockquotes, headers, tables, definition lists, figure captions, inline code, code blocks, social media posts, footnotes, and message boxes with close button
 
 Additional supported front matter:
 * Author attribution
