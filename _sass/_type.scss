@@ -122,8 +122,8 @@ blockquote::before {
     font-size: 6em;
     color: #ddd;
     position: absolute;
-    top: -0.2em;
-    left: -0.1em;
+    top: 0em;
+    left: 0em;
     line-height: 1;
     z-index: 0;
 }
@@ -133,8 +133,8 @@ blockquote::after {
     font-size: 6em;
     color: #ddd;
     position: absolute;
-    bottom: -0.2em;
-    right: -0.1em;
+    bottom: 0em;
+    right: 0em;
     line-height: 1;
     z-index: 0;
 }
