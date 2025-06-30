@@ -131,10 +131,10 @@ blockquote::before {
 blockquote::after {
     content: "\201D";
     font-size: 6em;
-    color: $light-scheme-blockquote;
+    color: $blockquote;
     position: absolute;
     bottom: -0.5em;
-    right: 0.1em;
+    right: 0.2em;
     line-height: 1;
     z-index: 0;
 }
@@ -142,7 +142,7 @@ blockquote::after {
 blockquote {
   width: 100%;
   background-color: $blockquote-bg;
-  padding: 25px 25px 25px 27px;
+  padding: 30px 30px 30px 32px;
   margin: 20px 0;
   font-size: 92%;
   position: relative;
