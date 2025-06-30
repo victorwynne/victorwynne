@@ -125,7 +125,7 @@ blockquote::before {
     top: -0.2em;
     left: -0.1em;
     line-height: 1;
-    z-index: -1;
+    z-index: 0;
 }
 
 blockquote::after {
@@ -136,9 +136,8 @@ blockquote::after {
     bottom: -0.2em;
     right: -0.1em;
     line-height: 1;
-    z-index: -1;
+    z-index: 0;
 }
-
 
 blockquote {
   width: 100%;
