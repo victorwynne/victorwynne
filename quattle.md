@@ -9,9 +9,6 @@ Quattle is a modern, responsive, and customizable theme for the static site gene
 ## <small>Current Release</small>
 [v1.6.0 (f687d4c)](https://github.com/victorwynne/quattle/releases/tag/v1.6.0-RC)<br><br>
 
-## <small>Demo</small>
-You are looking at it right now. 🤓<br><br>
-
 ## <small>Download</small>
 [GitHub](https://github.com/victorwynne/quattle/releases) or [RubyGems](https://rubygems.org/gems/quattle)<br><br>
 
