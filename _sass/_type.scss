@@ -167,6 +167,7 @@ a[href^="#fn:"] {
   margin: 0 0.2em 0 0.2em;
   text-align: center;
   color: $accent;
+  background: $blockquote-bg;
   border: 1.5px solid $blockquote;
   border-radius: 1em;
   vertical-align: middle;
@@ -174,6 +175,7 @@ a[href^="#fn:"] {
 
   @media (prefers-color-scheme: light) {
   color: $light-scheme-accent;
+  background: $light-scheme-blockquote-bg;
   border: 1.5px solid $light-scheme-blockquote;
   }
 }
