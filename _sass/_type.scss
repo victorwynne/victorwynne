@@ -117,6 +117,29 @@ span.link-arrow {
   }
 }
 
+blockquote::before {
+    content: "\201C";
+    font-size: 6em;
+    color: #ddd;
+    position: absolute;
+    top: -0.2em;
+    left: -0.1em;
+    line-height: 1;
+    z-index: -1;
+}
+
+blockquote::after {
+    content: "\201D";
+    font-size: 6em;
+    color: #ddd;
+    position: absolute;
+    bottom: -0.2em;
+    right: -0.1em;
+    line-height: 1;
+    z-index: -1;
+}
+
+
 blockquote {
   width: 100%;
   background-color: $blockquote-bg;
