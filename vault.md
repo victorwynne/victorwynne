@@ -7,24 +7,23 @@ title: Vault
 <h3>Browse all the blog posts by <a href="/vault/">date</a> or <a href="/tags/">tag</a>.</h3>
 
 <div class="post">
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
-{% for post in site.posts %}
-{% assign thisyear = post.date | date: "%B %Y" %}
-{% assign prevyear = post.previous.date | date: "%B %Y" %}
-{% assign counter = counter | plus: 1 %}
-{% if thisyear != prevyear %}
-
-<h2><small>{{ thisyear }} <small><strong><sup>{{ counter }}</sup></strong></small></small></h2>
-
-{% assign fli = forloop.index | minus: counter %}
-{% for post2 in site.posts limit: counter offset: fli %}
-
-<a href="{{ post2.url }}">{{ post2.title }}</a>&nbsp;&nbsp;
-<small><small><time datetime="{{ post2.date | date_to_xmlschema }}">{{ post2.date | date: "%-d %b %Y" }}</time></small></small>
-<br>
-{% endfor %}
-{% assign counter = 0 %}
-{% endif %}
+{% for year in posts_by_year %}
+  <h2>{{ year.name }} <small><sup>{{ year.items | size }}</sup></small></h2>
+  {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+  
+  {% for month in posts_by_month %}
+    <h2><small>{{ month.name }} <small><sup>{{ month.items | size }}</sup></small></small></h2>
+    {% for post in month.items %}
+      <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;
+<small><small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A" }}, {{ post.date | date_to_long_string: "ordinal", "US" }}</time></small></small>
+      <br>
+    {% endfor %}
+  {% endfor %}
+  {% unless forloop.last %}
+    <hr>
+  {% endunless %}
 {% endfor %}
 </div>
 <br><br>

@@ -81,14 +81,12 @@ hr {
   position: relative;
   margin: 1.5rem 0;
   border: 0;
-  border-top: 0.85px solid $hr;
-  border-bottom: 0.85px solid $hr;
-  opacity: 1;
+  border-top: 0.85px solid $blockquote;
+  border-bottom: 0.85px solid $blockquote;
 
   @media (prefers-color-scheme: light) {
-  border-top: 0.85px solid $light-scheme-hr;
-  border-bottom: 0.85px solid $light-scheme-hr;
-  opacity: 1;
+  border-top: 0.85px solid $light-scheme-blockquote;
+  border-bottom: 0.85px solid $light-scheme-blockquote;
   }
 }
 
