@@ -4,7 +4,7 @@ permalink: /vault/
 title: Vault
 ---
 
-<h3><center>Browse all the blog posts by <a href="/vault/">date</a> or <a href="/tags/">tag</a>.</center></h3>
+<h3>Browse all the blog posts by <a href="/vault/">date</a> or <a href="/tags/">tag</a>.</h3>
 
 <div class="post">
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
