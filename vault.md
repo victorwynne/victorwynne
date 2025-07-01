@@ -22,7 +22,7 @@ title: Vault
     {% endfor %}
   {% endfor %}
   {% unless forloop.last %}
-    <hr>
+    <hr class="year-separator”>
   {% endunless %}
 {% endfor %}
 </div>
