@@ -17,7 +17,7 @@ title: Vault Alt
     <h2><small>{{ month.name }}<small><strong><sup>{{ month.items | size }}</sup></strong></small></small></h2>
     {% for post in month.items %}
       <a href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;
-<small><small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A" }}, {{ post.date | date_to_long_string: "ordinal", "US" }}</time></small></small>
+<small><small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A" }}, {{ post.date | ordinal_day_month }}</time></small></small>
       <br>
     {% endfor %}
   {% endfor %}
