@@ -6,13 +6,13 @@ title: Quattle
 
 Quattle is a modern, responsive, and customizable theme for the static site generator Jekyll. It includes a number of features that are useful to writers, researchers, and software developers.<br><br>
 
-## <small>Current Release</small>
+## Current Release
 [v1.6.0 (f687d4c)](https://github.com/victorwynne/quattle/releases/tag/v1.6.0-RC)<br><br>
 
-## <small>Download</small>
+## Download
 [GitHub](https://github.com/victorwynne/quattle/releases) or [RubyGems](https://rubygems.org/gems/quattle)<br><br>
 
-## <small>Features</small>
+## Features
 Fully responsive with an emphasis on mobile friendly design, typography and interaction
 
 HTML, SASS, XML, supporting assets and config files for integration with Jekyll
@@ -49,7 +49,7 @@ Additional supported front matter:
 * Linked list style posts that have an external source reference
 <br><br>
 
-## <small>License</small>
+## License
 
 Quattle is free software distributed under a [MIT license](https://github.com/victorwynne/quattle/blob/main/LICENSE).
 <br><br>
