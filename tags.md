@@ -4,7 +4,7 @@ permalink: /tags/
 title: Tags
 ---
 
-<h3 class="info-line">Browse all the blog posts by <a href="/vault/">date</a> or <a href="/tags/">tag</a>.</h3>
+<h3 class="info-line"><center>Browse all the blog posts by <a href="/vault/">date</a> or <a href="/tags/">tag</a>.</center></h3>
 
 <div class="tag-list">
   {% assign tags_sorted = site.tags | sort %}
