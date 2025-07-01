@@ -1,7 +1,7 @@
 {
   "name": "Victor Wynne",
   "short_name": "Victor Wynne",
-  "description": "A self-authored blog with insightful commentary on topics such as software development, technology, business, science, global politics, and more.",
+  "description": "A self-authored blog with insightful commentary on topics such as software development, technology, business, science, politics, and more.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
