@@ -1,8 +1,8 @@
-—
+---
 layout: page
 permalink: /vaultalt/
 title: Vault Alt
-—
+---
 
 <h3>Browse all the blog posts by <a href=“/vault/“>date</a> or <a href=“/tags/“>tag</a>.</h3>
 
