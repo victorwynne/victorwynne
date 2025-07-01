@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Receding UI design"
-date: 2025-07-01 19:50
+date: 2025-07-01 19:51
 categories: [Links]
 tags: [design, iOS]
 link: https://bzamayo.com/ios-26-receding-ui-design
