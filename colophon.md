@@ -89,7 +89,7 @@ Links: [victorwynne.com/links.xml](https://victorwynne.com/links.xml)<br><br>
 
 ## Stats
 
-Blog Posts: {{ site.posts.size }}<br>
+Posts: {{ site.posts.size }}<br>
 Last Build: {{ site.time | date: '%R %Z' }} on {{ site.time | date_to_long_string: "ordinal", "US" }}<br><br>
 
 ## Contact
