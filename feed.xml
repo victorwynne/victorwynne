@@ -13,9 +13,11 @@ layout: none
 <title>{{ post.title | xml_escape }}</title>
 <description>
 {{ post.content | xml_escape }}
-    {% if post.link %}
-Source: <a href="{{ post.link | xml_escape }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a>
-    {% endif %}
+<![CDATA[
+                    {% if post.link %}
+                        <p>Source: <a href="{{ post.link }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a></p>
+                    {% endif %}
+                    ]]>
 </description>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
