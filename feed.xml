@@ -12,11 +12,10 @@ layout: none
 			<item>
 <title>{{ post.title | xml_escape }}</title>
 <description>
-
 <![CDATA[
 {{ post.content }}<br/>
                     {% if post.link %}
-                        Source: <a href="{{ post.link | xml_escape }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a>
+                        Link to source: <a href="{{ post.link | xml_escape }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a>
                     {% endif %}
                     ]]>
 </description>
