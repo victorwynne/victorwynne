@@ -15,7 +15,7 @@ layout: none
 {{ post.content | xml_escape }}
 <![CDATA[
                     {% if post.link %}
-                        <p>Source: <a href="{{ post.link }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a></p>
+                        <p>Source: <a href="{{ post.link | xml_escape }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a></p>
                     {% endif %}
                     ]]>
 </description>
