@@ -1,6 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -23,8 +21,6 @@ html {
 body {
   color: $text;
   background-color: $bg;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   ::selection {
   background: #ff453a;
   }

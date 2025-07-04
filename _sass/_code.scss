@@ -31,16 +31,6 @@ pre, code {
   background: #bdbdb3;
   }
 
-  ::-moz-selection {
-  color: $code-block-bg;
-  background: #bdbdb3;
-  }
-
-  ::-webkit-selection {
-  color: $code-block-bg;
-  background: #bdbdb3;
-  }
-
   @media (prefers-color-scheme: light) {
   background-color: $code-block-bg-light;
 }
@@ -160,11 +150,6 @@ figure.highlight, div.highlight {
   border-right: 1px solid #656565;
 
   /* For older browsers and Safari */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   }
   }
