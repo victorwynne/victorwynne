@@ -13,7 +13,7 @@ layout: none
 <title>{{ post.title | xml_escape }}</title>
 <description>
 				
-    {% if post.source_link %}
+    {% if post.link %}
         <p>Source: <a href="{{ post.link }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a></p>
     {% endif %}
 
