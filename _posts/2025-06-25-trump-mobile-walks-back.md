@@ -8,7 +8,7 @@ link: https://www.theverge.com/gadgets/693080/trump-mobile-t1-phone-made-usa
 description: Apple is being threatened with huge tariffs for not manufacturing the iPhone in America, meanwhile Trump Mobile is lying about their Chinese manufactured Android phone being made in America. It’s not.
 ---
 
-Quoting myself from [last week](/trump-mobile/):
+Quoting myself from [last week](https://victorwynne.com/trump-mobile/):
 
 >Apple is being threatened with huge tariffs for not manufacturing the iPhone in America, meanwhile Trump Mobile is lying about their Chinese manufactured Android phone being made in America. It’s not. This is literally impossible, and anyone who believes the bullshit sales pitch is the definition of a stupid Trump supporter.
 
