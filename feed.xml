@@ -13,9 +13,9 @@ layout: none
 <title>{{ post.title | xml_escape }}</title>
 <description>
 <![CDATA[
-{{ post.content }}
+{{ post.content }}<br/>
                     {% if post.link %}
-                        Link to source: <a href="{{ post.link | xml_escape }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a>
+                        Source: <a href="{{ post.link | xml_escape }}">{{ post.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a>
                     {% endif %}
                     ]]>
 </description>
