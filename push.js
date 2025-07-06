@@ -153,6 +153,9 @@ const notificationData = JSON.stringify({
   url: latestPost.url,
   chrome_web_icon: DEFAULT_ICON_URL,
   external_id: externalId, // Now a proper UUID!
+  // Add these lines for iOS badging:
+  ios_badgeType: "Increase", // "Increase" or "SetTo"
+  ios_badgeCount: 1, // The number to increase by, or to set to
   // Other optional parameters:
   // web_push_topic: "new-posts",
   // ttl: 3600, // Time to live in seconds (e.g., 1 hour)
