@@ -149,7 +149,8 @@ const notificationData = JSON.stringify({
   app_id: ONESIGNAL_APP_ID,
   included_segments: ['Subscribed Users'], // Send to all currently subscribed users
   contents: { en: latestPost.title },
-  headings: { en: 'New Blog Post!' },
+  headings: { en: 'Victor Wynne' },
+  subtitle: { en:: '' },
   url: latestPost.url,
   chrome_web_icon: DEFAULT_ICON_URL,
   external_id: externalId, // Now a proper UUID!
