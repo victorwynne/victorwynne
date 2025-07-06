@@ -1,5 +1,3 @@
-importScripts: ['/OneSignalSDKWorker.js'],
-
 module.exports = {
   globDirectory: '_site/',
   globPatterns: [
@@ -9,6 +7,7 @@ module.exports = {
   ignoreURLParametersMatching: [
     /^utm_/,
   ],
+  importScripts: ['/OneSignalSDKWorker.js'], 
   runtimeCaching: [{
     urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,
     handler: 'StaleWhileRevalidate',
