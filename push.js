@@ -2,6 +2,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid'); // Import v4 UUID generator
 
 // --- Configuration ---
 const ONESIGNAL_APP_ID = process.env.ONESIGNAL_APP_ID;
@@ -136,9 +137,13 @@ if (daysDiff > NOTIFY_IF_LESS_THAN_DAYS_OLD) {
     process.exit(0);
 }
 
-// Generate a unique external_id to prevent duplicate notifications for the same post on re-builds
-// Using date from post and a slugified version of the title
-const externalId = `jekyll_post_${latestPost.date.getFullYear()}${(latestPost.date.getMonth() + 1).toString().padStart(2, '0')}${latestPost.date.getDate().toString().padStart(2, '0')}_${latestPost.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase().substring(0, 50)}_${Date.now()}`;
+// Generate a truly unique external_id using UUID v4
+// IMPORTANT: If you want to send a notification only ONCE per new post,
+// you might want the UUID to be derived from the post content/path,
+// so the same post always gets the same UUID.
+// If you want to send a notification *every time this script runs* for a new build,
+// then a fresh UUIDv4 for each build is appropriate.
+const externalId = uuidv4(); // Generate a fresh UUID for each notification attempt
 
 const notificationData = JSON.stringify({
   app_id: ONESIGNAL_APP_ID,
@@ -147,7 +152,7 @@ const notificationData = JSON.stringify({
   headings: { en: 'New Blog Post!' },
   url: latestPost.url,
   chrome_web_icon: DEFAULT_ICON_URL,
-  external_id: externalId, // Essential for preventing duplicates
+  external_id: externalId, // Now a proper UUID!
   // Other optional parameters:
   // web_push_topic: "new-posts",
   // ttl: 3600, // Time to live in seconds (e.g., 1 hour)
@@ -168,7 +173,7 @@ const options = {
 
 console.log(`Attempting to send notification for: "${latestPost.title}"`);
 console.log(`URL: ${latestPost.url}`);
-console.log(`External ID: ${externalId}`);
+console.log(`External ID (UUID): ${externalId}`); // Log that it's a UUID
 
 const req = https.request(options, (res) => {
   let responseData = '';
@@ -188,7 +193,9 @@ const req = https.request(options, (res) => {
       }
     } else {
       console.error('Failed to send notification to OneSignal. Check response above for details.');
-      process.exit(1); // Indicate build failure if notification fails
+      // Keep this process.exit(1) if you want the build to fail if notification sending fails.
+      // If you want the build to succeed even if the notification fails, comment this out.
+      process.exit(1);
     }
   });
 });

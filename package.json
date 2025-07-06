@@ -8,6 +8,9 @@
     "build:workbox": "workbox generateSW workbox-config.js",
     "build": "npm run build:jekyll && npm run build:workbox && node ./push.js"
   },
+  "dependencies": {    <-- ADD THIS SECTION
+    "uuid": "^9.0.0"   <-- ADD THIS LINE (or the latest version)
+  },
   "devDependencies": {
     "workbox-cli": "^6.0.0" 
   }
