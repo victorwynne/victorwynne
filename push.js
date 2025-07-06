@@ -150,7 +150,7 @@ const notificationData = JSON.stringify({
   included_segments: ['Subscribed Users'], // Send to all currently subscribed users
   contents: { en: latestPost.title },
   headings: { en: 'Victor Wynne' },
-  subtitle: { en:: '' },
+  subtitle: { en: '' },
   url: latestPost.url,
   chrome_web_icon: DEFAULT_ICON_URL,
   external_id: externalId, // Now a proper UUID!
