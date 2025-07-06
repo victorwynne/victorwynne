@@ -2,6 +2,9 @@
   command = "npm run build" # Now runs your build AND the push script
   publish = "_site"         # The directory Jekyll outputs your site to (usually _site)
 
+[build.environment]
+  TZ = "America/New_York" # Set the timezone for the build environment
+
 [context.production]
   # Environment variables you set in Netlify UI (ONESIGNAL_APP_ID, ONESIGNAL_REST_API_KEY)
   # will automatically be available to your build process and scripts.
