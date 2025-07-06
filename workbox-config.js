@@ -1,3 +1,5 @@
+importScripts: ['/OneSignalSDKWorker.js'],
+
 module.exports = {
   globDirectory: '_site/',
   globPatterns: [
