@@ -1,0 +1,14 @@
+{
+  "name": "Victor Wynne",
+  "version": "1.0.0",
+  "description": "A self-authored blog with insightful commentary on topics such as software development, technology, business, science, politics, and more.",
+  "main": "index.js",
+  "scripts": {
+    "build:jekyll": "bundle exec jekyll build",
+    "build:workbox": "workbox generateSW workbox-config.js",
+    "build": "npm run build:jekyll && npm run build:workbox"
+  },
+  "devDependencies": {
+    "workbox-cli": "^6.0.0" 
+  }
+}

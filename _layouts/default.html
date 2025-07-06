@@ -25,6 +25,20 @@ layout: compress
   gtag('config', 'G-26NWWZ94DD');
 </script>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('ServiceWorker registered! Scope:', registration.scope);
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed:', err);
+        });
+    });
+  }
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
