@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "Victor Wynne",
   "short_name": "Victor Wynne",
   "description": "A self-authored blog with insightful commentary on topics such as software development, technology, business, science, politics, and more.",
