@@ -142,27 +142,26 @@ layout: compress
 
   <link rel="canonical" href="{{ canonical_url | relative_url }}">
 
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
-        appId: "1860e89f-f790-4e30-af88-
-ee26a306c7ea",
-        serviceWorkerPath: "/OneSignalSDKWorker.js",
-        autoResubscribe: true,
-        notifyButton: {
-          enable: true,
-        },
-        welcomeNotification: {
-          disable: true,
-          title: "Welcome!",
-          message: "Thanks for subscribing to our blog!",
-        }
-      });
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
+      serviceWorkerPath: "/OneSignalSDKWorker.js",
+      autoResubscribe: true,
+      notifyButton: {
+        enable: true,
+      },
+      welcomeNotification: {
+        disable: true,
+        title: "Welcome!",
+        message: "Thanks for subscribing to our blog!",
+      }
     });
-  </script>
-  <script src="/register-sw.js"></script> 
+  });
+</script>
+<script src="/register-sw.js"></script>
 
 </head>
 
