@@ -12,9 +12,9 @@ const POSTS_DIR = path.join(__dirname, '_posts'); // Adjust if your posts are el
 const SITE_BASE_URL = 'https://victorwynne.com'; // Your website's base URL
 const DEFAULT_ICON_URL = 'https://victorwynne.com/assets/push-icon.png'; // Your default notification icon
 
-// How many days old can a post be (based on its front matter 'date') to still trigger a notification on a fresh build.
+// How many minutes old can a post be (based on its front matter 'date') to still trigger a notification on a fresh build.
 // This prevents old posts from being re-notified on minor site changes.
-const NOTIFY_IF_LESS_THAN_DAYS_OLD = 1; // e.g., 2 days
+const NOTIFY_IF_LESS_THAN_MINUTES_OLD = 30; // e.g., 30 minutes
 
 // --- Helper to parse YAML Front Matter ---
 function parseFrontMatter(fileContent) {
@@ -129,11 +129,11 @@ if (!latestPost) {
 
 // Check if the latest post is recent enough to notify about
 const now = new Date();
-const timeDiff = now.getTime() - latestPost.date.getTime();
-const daysDiff = timeDiff / (1000 * 60 * 60 * 24);
+const timeDiff = now.getTime() - latestPost.date.getTime(); // Difference in milliseconds
+const minutesDiff = timeDiff / (1000 * 60); // Convert milliseconds to minutes
 
-if (daysDiff > NOTIFY_IF_LESS_THAN_DAYS_OLD) {
-    console.log(`Latest post "${latestPost.title}" (Date: ${latestPost.date.toISOString().split('T')[0]}) is too old (${daysDiff.toFixed(1)} days) to send a notification based on 'NOTIFY_IF_LESS_THAN_DAYS_OLD' setting.`);
+if (minutesDiff > NOTIFY_IF_LESS_THAN_MINUTES_OLD) {
+    console.log(`Latest post "${latestPost.title}" (Date: ${latestPost.date.toISOString()}) is too old (${minutesDiff.toFixed(1)} minutes) to send a notification based on 'NOTIFY_IF_LESS_THAN_MINUTES_OLD' setting.`);
     process.exit(0);
 }
 
