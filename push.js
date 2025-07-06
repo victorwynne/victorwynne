@@ -138,7 +138,7 @@ if (daysDiff > NOTIFY_IF_LESS_THAN_DAYS_OLD) {
 
 // Generate a unique external_id to prevent duplicate notifications for the same post on re-builds
 // Using date from post and a slugified version of the title
-const externalId = `jekyll_post_${latestPost.date.getFullYear()}${(latestPost.date.getMonth() + 1).toString().padStart(2, '0')}${latestPost.date.getDate().toString().padStart(2, '0')}_${latestPost.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase().substring(0, 50)}`;
+const externalId = `jekyll_post_${latestPost.date.getFullYear()}${(latestPost.date.getMonth() + 1).toString().padStart(2, '0')}${latestPost.date.getDate().toString().padStart(2, '0')}_${latestPost.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase().substring(0, 50)}_${Date.now()}`;
 
 const notificationData = JSON.stringify({
   app_id: ONESIGNAL_APP_ID,
