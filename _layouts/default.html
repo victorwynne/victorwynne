@@ -158,10 +158,10 @@ layout: compress
 <body>
 
 <div class="container content">
-  <header class="masthead masthead-sticky"> <h1 class="masthead-title"><a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</h1>
+  <header class="masthead"> <h1 class="masthead-title"><a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</h1>
 
     <nav> <div class="navigation">
-        <ul id="navigation-list" class="navigation-pill">
+        <ul id="navigation-list">
           <li><a href="/vault/">vault</a></li>
           <li><a href="/quattle/">quattle</a></li>
           <li><a href="/colophon/">colophon</a></li>
@@ -169,7 +169,6 @@ layout: compress
       </div>
     </nav>
   </header>
-</div>
 
   <main>
   {{ content | smartify }}
