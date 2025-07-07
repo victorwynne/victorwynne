@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mamdani is securing the anti-Zionist vote"
-date: 2025-07-06 19:59
+date: 2025-07-06 20:30
 categories: [Links]
 tags: [politics]
 link: https://blogs.timesofisrael.com/we-are-nyc-rabbis-who-support-zohran-mamdani-heres-why/
