@@ -3,7 +3,7 @@ layout: post
 title: "Liquid Glass"
 date: 2025-06-11 17:05
 categories: [Articles]
-tags: [design]
+tags: [design, liquid glass]
 description: My biggest quibble so far is the lack of readability when it comes to the new tab bar design, and the need for less transparency in Control Center.
 ---
 

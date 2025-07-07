@@ -3,7 +3,7 @@ layout: post
 title: "Terminal app is getting a visual refresh"
 date: 2025-06-17 20:35
 categories: [Links]
-tags: [design, macOS]
+tags: [design, liquid glass, macOS]
 link: https://www.macrumors.com/2025/06/16/apples-terminal-app-macos-tahoe/
 description: The updated Terminal will support 24-bit color and Powerline fonts, according to Apple’s State of the Platforms presentation at WWDC25.
 ---
