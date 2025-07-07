@@ -1,3 +1,4 @@
+/* === Global Resets === */
 * {
   box-sizing: border-box;
 }
@@ -8,63 +9,55 @@ body {
   padding: 0;
 }
 
+/* === Root Typography and Layout === */
 html {
   font-family: $root-font-family;
   font-size: $root-font-size;
   line-height: $root-line-height;
 
   @media (min-width: $large-breakpoint) {
-  font-size: $large-font-size;
+    font-size: $large-font-size;
   }
 }
 
+/* === Body Styles and Theme Handling === */
 body {
   color: $text;
   background-color: $bg;
+
   ::selection {
-  background: #ff453a;
+    background: #ff453a;
   }
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
-  background-color: $light-scheme-bg;
-  ::selection {
-  background: #2eb1c6;
-  }
+    color: $light-scheme-text;
+    background-color: $light-scheme-bg;
+
+    ::selection {
+      background: #2eb1c6;
+    }
   }
 }
 
-// No `:visited` state is required by default (browsers will use `a`)
+/* === Base Elements === */
 a {
   color: $accent;
   text-decoration: underline;
   text-underline-offset: 0.325em;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-accent;
+    color: $light-scheme-accent;
   }
 
-  // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-  text-decoration: underline;
+    text-decoration: underline;
   }
 
   strong {
-  color: inherit;
+    color: inherit;
   }
 }
-
-/* --- Navigation Link Styles --- */
-nav a {
-  text-decoration: none;
-  
-  &:hover,
-  &:focus {
-  text-decoration: none;
-  }
-}
-
 
 img {
   display: block;
@@ -73,6 +66,7 @@ img {
   border-radius: 5px;
 }
 
+/* === Tables === */
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -80,7 +74,7 @@ table {
   border-collapse: collapse;
 
   @media (prefers-color-scheme: light) {
-  border: 1.5px solid $light-scheme-header;
+    border: 1.5px solid $light-scheme-header;
   }
 }
 
@@ -90,7 +84,7 @@ th {
   border: 1px dashed $header;
 
   @media (prefers-color-scheme: light) {
-  border: 1px dashed $light-scheme-header;
+    border: 1px dashed $light-scheme-header;
   }
 }
 
@@ -103,6 +97,16 @@ tbody tr:nth-child(odd) th {
   background-color: $bg;
 
   @media (prefers-color-scheme: light) {
-  background-color: $light-scheme-bg;
+    background-color: $light-scheme-bg;
+  }
+}
+
+/* === Navigation Links === */
+nav a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
   }
 }
