@@ -1,7 +1,9 @@
-—
+---
 layout: null
-permalink: /debugposts/
-—
+permalink: /debug/
+title: Debug
+---
+
 # Debugging site.posts - Full List for Sitemap Check
 
 Total posts found by Jekyll: {{ site.posts | size }}
