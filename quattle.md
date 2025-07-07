@@ -26,7 +26,7 @@ Manifest.json to function as a [PWA](https://developer.mozilla.org/en-US/docs/We
 
 CSS media feature `prefers-color-scheme` to detect if the visitor’s device has requested a light or dark mode
 
-HTML/CSS compression (minification)
+HTML/CSS/JS minification with source maps
 
 RSS 2.0 syndicated feed
 
