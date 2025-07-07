@@ -4,129 +4,135 @@ layout: compress
 
 <!doctype html>
 <html lang="en">
-
 <head>
+
+  <!-- === Meta Configuration === -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-  {% if page.title == "Home" %}
-  {{ site.title }}{% if site.tagline %} &middot; {{ site.tagline }}{% endif %}
-  {% else %}
-  {{ page.title }} &middot; {{ site.title }}
-  {% endif %}
-</title>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26NWWZ94DD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- === Title === -->
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }}{% if site.tagline %} &middot; {{ site.tagline }}{% endif %}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
 
-  gtag('config', 'G-26NWWZ94DD');
-</script>
+  <!-- === Google Analytics === -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26NWWZ94DD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-26NWWZ94DD');
+  </script>
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('ServiceWorker registered! Scope:', registration.scope);
-        })
-        .catch(err => {
-          console.log('ServiceWorker registration failed:', err);
-        });
-    });
-  }
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "{{ site.url }}",
-  "name": "{{ site.title | escape }}"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ site.author.name | escape }}",
-  "url": "{{ site.url }}",
-  "sameAs": [
-    "{{ site.url }}"
-  ]
-}
-</script>
-
-  {% if page.layout == 'post' %}
-    <script type="application/ld+json">{
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ site.url }}{{ page.url | relative_url }}"
-      },
-      "headline": "{{ page.title | escape }}",
-      {% if page.image %}
-      "image": [
-        "{{ site.url }}{{ page.image | relative_url }}"
-      ],
-      {% else %}
-      "image": [
-        "{{ site.url }}/assets/iMessage.png"
-      ],
-      {% endif %}
-      "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ site.author.name | default: page.author | escape }}",
-        "url": "{{ site.url }}/colophon"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "{{ site.title | escape }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ site.url }}{{ site.logo | relative_url }}"
-        }
-      },
-      "description": "{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}"
-      {% if page.tags %}
-      ,"keywords": "{{ page.tags | join: ", " }}"
-      {% endif %}
+  <!-- === Service Worker Registration === -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registered! Scope:', registration.scope);
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed:', err);
+          });
+      });
     }
+  </script>
+
+  <!-- === Structured Data: WebSite === -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "{{ site.url }}",
+      "name": "{{ site.title | escape }}"
+    }
+  </script>
+
+  <!-- === Structured Data: Author === -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.author.name | escape }}",
+      "url": "{{ site.url }}",
+      "sameAs": [
+        "{{ site.url }}"
+      ]
+    }
+  </script>
+
+  <!-- === Structured Data: Blog Post === -->
+  {% if page.layout == 'post' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ page.url | relative_url }}"
+        },
+        "headline": "{{ page.title | escape }}",
+        {% if page.image %}
+          "image": [ "{{ site.url }}{{ page.image | relative_url }}" ],
+        {% else %}
+          "image": [ "{{ site.url }}/assets/iMessage.png" ],
+        {% endif %}
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ site.author.name | default: page.author | escape }}",
+          "url": "{{ site.url }}/colophon"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "{{ site.title | escape }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}{{ site.logo | relative_url }}"
+          }
+        },
+        "description": "{{ page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}"
+        {% if page.tags %}
+          , "keywords": "{{ page.tags | join: ', ' }}"
+        {% endif %}
+      }
     </script>
   {% endif %}
 
+  <!-- === SEO Meta Tags === -->
   {% if page.description %}
     <meta name="description" content="{{ page.description | strip_html | escape }}">
   {% else %}
     <meta name="description" content="{{ site.description | strip_html | escape }}">
-  {% endif %} 
+  {% endif %}
   <meta name="keywords" content="Apple, technology, Jekyll, Ruby, HTML, CSS, Swift">
   <meta name="author" content="Victor Wynne">
 
+  <!-- === Open Graph & Theme === -->
   <meta property="og:image" content="https://victorwynne.com/assets/iMessage.png">
-
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6f4">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
 
+  <!-- === Apple Specific === -->
   <meta name="apple-mobile-web-app-title" content="victorwynne.com">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
+  <!-- === Link Tags === -->
   <link rel="manifest" href="/manifest.json">
-
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
   <link rel="apple-touch-icon" sizes="512x512" href="{{ site.baseurl }}/assets/apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">  
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
   <link rel="icon" href="{{ site.baseurl }}/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/assets/favicon-96x96.png">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
 
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml"> 
-  
+  <!-- === Canonical URL === -->
   {% assign canonical_url = site.url | append: page.url | replace: "/index.html", "/" %}
   {% if page.url == "/" %}
     {% assign canonical_url = site.url %}
@@ -139,52 +145,61 @@ layout: compress
   {% if site.permalink contains ".htm" %}
     {% assign canonical_url = canonical_url | replace: ".htm", "" %}
   {% endif %}
-
   <link rel="canonical" href="{{ canonical_url | relative_url }}">
 
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
+  <!-- === OneSignal Push Notifications === -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "1860e89f-f790-4e30-af88-ee26a306c7ea"
+      });
     });
-  });
-</script>
-<script src="/register-sw.js"></script>
+  </script>
+
+  <!-- === Register Service Worker Fallback === -->
+  <script src="/register-sw.js"></script>
 
 </head>
 
 <body>
 
-<div class="container content">
-<header class="masthead">
+  <!-- === Page Wrapper === -->
+  <div class="container content">
 
-<h1 class="masthead-title"><a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</h1>
+    <!-- === Site Header === -->
+    <header class="masthead">
+      <h1 class="masthead-title">
+        <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+      </h1>
 
-	<!-- Change navigation links here -->
-	<nav>
-	<div class="navigation">
-	<ul id="navigation-list">
-	<li><a href="/vault/">vault</a></li>
-  <li><a href="/quattle/">quattle</a></li>
-	<li><a href="/colophon/">colophon</a></li>
-	</ul>
-	</div>
-	</nav>
-	
-  </header>
+      <!-- === Navigation === -->
+      <nav>
+        <div class="navigation">
+          <ul id="navigation-list">
+            <li><a href="/vault/">vault</a></li>
+            <li><a href="/quattle/">quattle</a></li>
+            <li><a href="/colophon/">colophon</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <main>
-  {{ content | smartify }}
-  </main>
+    <!-- === Main Content === -->
+    <main>
+      {{ content | smartify }}
+    </main>
 
-  <footer class="footer">
-  <p>Made with love in New York<br>© 2019 - {{ "now" | date: "%Y" }}</p>
-  </footer>
+    <!-- === Footer === -->
+    <footer class="footer">
+      <p>Made with love in New York<br>© 2019 - {{ "now" | date: "%Y" }}</p>
+    </footer>
+
   </div>
 
-<script src="/register-sw.js"></script>
+  <!-- === Redundant SW Registration (Keep for Legacy Support) === -->
+  <script src="/register-sw.js"></script>
 
 </body>
 </html>
