@@ -1,4 +1,4 @@
-
+/* === Default Notice === */
 .notice {
   margin-bottom: 15px;
   padding: 12px;
@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+/* === Guide Notice === */
 .notice-guide {
   margin-bottom: 15px;
   padding: 12px;
@@ -19,12 +20,13 @@
   text-align: center;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
-  background-color: $light-scheme-blockquote-bg;
-  border: .1rem solid $light-scheme-blockquote;
+    color: $light-scheme-text;
+    background-color: $light-scheme-blockquote-bg;
+    border: .1rem solid $light-scheme-blockquote;
   }
 }
 
+/* === Colored Notices === */
 .notice-green {
   margin-bottom: 15px;
   padding: 12px;

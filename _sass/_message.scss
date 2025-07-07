@@ -1,4 +1,4 @@
-// Messages
+/* === Message Box Examples === */
 
 // Example message box
 // <p class="message-yellow"><small><b>Warning!</b> This is a sentence inside of a message box.</small></p>
@@ -7,6 +7,7 @@
 // <p class="message-yellow"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 // <small><b>Warning!</b> This is a sentence inside of a message box.</small></p>
 
+/* === Default Message Box === */
 .message {
   margin-bottom: 15px;
   padding: 12px;
@@ -17,12 +18,13 @@
   text-align: center;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
-  background-color: $message-light;
-  border: .1rem solid #d2d2d2;
+    color: $light-scheme-text;
+    background-color: $message-light;
+    border: .1rem solid #d2d2d2;
   }
 }
 
+/* === Color Variants === */
 .black {
   margin-bottom: 15px;
   padding: 12px;
@@ -86,7 +88,7 @@
   border-radius: .5em;
 }
 
-/* The close button */
+/* === Close Button === */
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -98,7 +100,6 @@
   transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
 }

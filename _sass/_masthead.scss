@@ -1,5 +1,4 @@
-// The style of the site's title, secondary description and navigation
-
+/* === Masthead Container === */
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1.5rem;
@@ -7,6 +6,7 @@
   text-align: center;
 }
 
+/* === Site Title === */
 .masthead-title {
   margin-top: 0;
   margin-bottom: 14px;
@@ -17,33 +17,35 @@
   font-size: 250%;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
+    color: $light-scheme-text;
   }
 
   a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
   }
 
   small {
-  margin-left: 3px;
-  font-size: 80%;
+    margin-left: 3px;
+    font-size: 80%;
   }
 }
 
+/* === Navigation === */
 .navigation {
   display: block;
   font-size: 125%;
   font-weight: 600;
 
-ul#navigation-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  ul#navigation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
+
   ul#navigation-list li {
-  display: inline;
-  list-style: none;
-	margin: 0 12px;
+    display: inline;
+    list-style: none;
+    margin: 0 12px;
   }
 }
