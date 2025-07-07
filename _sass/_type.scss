@@ -1,7 +1,12 @@
-// Typography
+/* === Typography === */
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
@@ -10,19 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-header;
-  }
-}
-
-h4::before {
-  content: "#";
-  color: $header-before;
-  left: -1em;
-  top: 0;
-	position: absolute;
-
-  @media (prefers-color-scheme: light) {
-  color: $light-scheme-header-before;
+    color: $light-scheme-header;
   }
 }
 
@@ -40,32 +33,51 @@ h3 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: $text;
-    
-  @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
-  }
-}
 
-.info-line {
-  margin-bottom: 1.4rem;
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-text;
+  }
 }
 
 h4 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
+
+  &::before {
+    content: "#";
+    color: $header-before;
+    left: -1em;
+    top: 0;
+    position: absolute;
+
+    @media (prefers-color-scheme: light) {
+      color: $light-scheme-header-before;
+    }
+  }
 }
 
-h5, h6 {
+h5,
+h6 {
   margin-top: 1rem;
   font-size: 1rem;
 }
+
+/* === Paragraphs === */
 
 p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-ul, ol, dl {
+.info-line {
+  margin-bottom: 1.4rem;
+}
+
+/* === Lists and Descriptions === */
+
+ul,
+ol,
+dl {
   margin-top: 0;
 }
 
@@ -74,21 +86,25 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
+/* === Horizontal Rules === */
+
 hr {
-  position: relative; 
+  position: relative;
   border: 0;
   margin: 2em auto;
   border-top: 0.85px solid $blockquote;
   border-bottom: 0.85px solid $blockquote;
 
   @media (prefers-color-scheme: light) {
-  border-top: 0.85px solid $light-scheme-blockquote;
-  border-bottom: 0.85px solid $light-scheme-blockquote;
+    border-top: 0.85px solid $light-scheme-blockquote;
+    border-bottom: 0.85px solid $light-scheme-blockquote;
   }
 }
+
+/* === Year Separator === */
 
 .year-separator {
   border: none;
@@ -98,51 +114,57 @@ hr {
   margin-left: auto;
   margin-right: auto;
   background: transparent;
-  text-align: center; 
+  text-align: center;
   overflow: visible;
+
+  &::before {
+    content: "• • •";
+    display: block;
+    font-size: 2em;
+    margin-top: 1.6em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.2em;
+    color: $blockquote;
+    line-height: 1;
+
+    @media (prefers-color-scheme: light) {
+      color: $light-scheme-blockquote;
+    }
+  }
 }
 
-.year-separator::before {
-  content: "• • •";
-  display: block;
-  font-size: 2em;
-  margin-top: 1.6em;
-  margin-bottom: 5em;
-  margin-left: auto;
-  margin-right: auto;
-  letter-spacing: 0.2em;
-  color: $blockquote;
-  line-height: 1;
-  
-  @media (prefers-color-scheme: light) {
-  color: $light-scheme-blockquote;
-  }
-} 
+/* === Abbreviations === */
 
 abbr {
   font-size: 85%;
   font-weight: bold;
-  opacity: .5;
+  opacity: 0.5;
   color: $text;
   text-transform: uppercase;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
+    color: $light-scheme-text;
   }
 
   &[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
   }
 }
+
+/* === Link Arrow === */
 
 span.link-arrow {
   color: $element;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-element;
+    color: $light-scheme-element;
   }
 }
+
+/* === Blockquotes === */
 
 blockquote {
   width: 100%;
@@ -152,39 +174,44 @@ blockquote {
   font-size: 92%;
   position: relative;
   border-left: 2px solid $blockquote;
-  border-radius: .5em;
+  border-radius: 0.5em;
 
   @media (prefers-color-scheme: light) {
-  background-color: $light-scheme-blockquote-bg;
-  border-left: 2px solid $light-scheme-blockquote;
+    background-color: $light-scheme-blockquote-bg;
+    border-left: 2px solid $light-scheme-blockquote;
   }
 
   p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: 30em) {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
+
+/* === Figures === */
 
 figure {
   margin: 0;
 }
 
+/* === Mark Highlighting === */
+
 mark {
   background: $accent;
   color: $light-scheme-text;
-	padding: 2px 2px;
+  padding: 2px 2px;
 
   @media (prefers-color-scheme: light) {
-  background: $light-scheme-accent;
-  color: $text;
+    background: $light-scheme-accent;
+    color: $text;
   }
 }
 
-// Footnote number within body text
+/* === Footnotes === */
+
 a[href^="#fn:"] {
   display: inline-block;
   position: relative;
@@ -201,47 +228,43 @@ a[href^="#fn:"] {
   text-decoration: none;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-accent;
-  background: $light-scheme-blockquote-bg;
-  border: 1.5px solid $light-scheme-blockquote;
+    color: $light-scheme-accent;
+    background: $light-scheme-blockquote-bg;
+    border: 1.5px solid $light-scheme-blockquote;
   }
 }
 
-// Back to footnote link
 a[href^="#fnref:"] {
   display: inline-block;
-  margin-left: .1rem;
+  margin-left: 0.1rem;
   font-weight: bold;
   padding: 0.1em 0.1em 0.1em;
 }
 
-// List of footnotes
 .footnotes {
   margin-top: 2rem;
   font-size: 80%;
 
-:target {
-	padding: 6px;
-  border: solid 1.5px $blockquote;
+  :target {
+    padding: 6px;
+    border: solid 1.5px $blockquote;
 
-  @media (prefers-color-scheme: light) {
-  border: solid 1.5px $light-scheme-blockquote;
+    @media (prefers-color-scheme: light) {
+      border: solid 1.5px $light-scheme-blockquote;
+    }
   }
- }
 }
 
 .reversefootnote {
- text-decoration: none;
- color: $accent;
+  text-decoration: none;
+  color: $accent;
 
- @media (prefers-color-scheme: light) {
- color: $light-scheme-accent;
- }
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-accent;
+  }
 }
 
-// Custom type
-//
-// Extend paragraphs with `.lead` for larger introductory text.
+/* === Custom Type === */
 
 .lead {
   font-size: 1.25rem;
@@ -249,6 +272,6 @@ a[href^="#fnref:"] {
   color: $text;
 
   @media (prefers-color-scheme: light) {
-  color: $light-scheme-text;
+    color: $light-scheme-text;
   }
 }

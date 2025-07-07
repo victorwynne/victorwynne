@@ -1,4 +1,5 @@
 /* === Foundations === */
+
 .highlighter-rouge {
   font-family: $code-font-family;
   font-size: 91%;
@@ -35,6 +36,7 @@ code {
 }
 
 /* === Inline Code === */
+
 code {
   padding: 2px 4px;
   border-radius: 3px;
@@ -52,6 +54,7 @@ code.highlight {
 }
 
 /* === Block Code === */
+
 pre {
   border-radius: 5px;
   padding: 15px 17px;
@@ -66,6 +69,7 @@ pre {
 }
 
 /* === Highlight Containers === */
+
 figure.highlight,
 div.highlight {
   position: relative;
@@ -147,11 +151,13 @@ div.highlight {
 }
 
 /* === Hide Language Label === */
+
 .hide-lang + figure code::before {
   visibility: hidden;
 }
 
 /* === Language-Specific Overrides === */
+
 .language-liquid {
   .p {
     color: #6aaf50;
@@ -159,6 +165,7 @@ div.highlight {
 }
 
 /* === ID-Specific Overrides === */
+
 #c-example + figure {
   .kt {
     color: #5180b3;

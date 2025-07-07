@@ -1,4 +1,5 @@
 /* === Layout Container === */
+
 .container {
   max-width: 38rem;
   padding-left:  1.5rem;
@@ -8,6 +9,7 @@
 }
 
 /* === Footer === */
+
 footer {
   margin-top: 3rem;
   margin-bottom: 0.5rem;
@@ -16,6 +18,7 @@ footer {
 }
 
 /* === Post Navigation === */
+
 .post-nav {
   display: flex;
   justify-content: space-between;
@@ -36,6 +39,7 @@ footer {
 }
 
 /* === Accessibility Utility === */
+
 .unsighted {
   border: 0;
   clip-path: inset(50%);

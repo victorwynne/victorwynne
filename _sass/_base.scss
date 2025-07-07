@@ -1,4 +1,5 @@
 /* === Global Resets === */
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +11,7 @@ body {
 }
 
 /* === Root Typography and Layout === */
+
 html {
   font-family: $root-font-family;
   font-size: $root-font-size;
@@ -21,6 +23,7 @@ html {
 }
 
 /* === Body Styles and Theme Handling === */
+
 body {
   color: $text;
   background-color: $bg;
@@ -40,6 +43,7 @@ body {
 }
 
 /* === Base Elements === */
+
 a {
   color: $accent;
   text-decoration: underline;
@@ -67,6 +71,7 @@ img {
 }
 
 /* === Tables === */
+
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -102,6 +107,7 @@ tbody tr:nth-child(odd) th {
 }
 
 /* === Navigation Links === */
+
 nav a {
   text-decoration: none;
 
