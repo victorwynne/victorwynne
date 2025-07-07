@@ -1,0 +1,67 @@
+// Variables for the Safari Pill Look
+// These are now set for the DEFAULT DARK THEME.
+$safari-pill-bg: rgba(0, 0, 0, 0.4); // Semi-transparent black for default dark mode
+$safari-pill-border-color: rgba(255, 255, 255, 0.08); // Very subtle white border for default dark mode
+$safari-pill-blur-amount: 15px; // Adjust this value to your desired blur intensity
+
+// Light mode specific colors for the pill background and border
+$light-safari-pill-bg: rgba(255, 255, 255, 0.75); // Slightly transparent white for light mode
+$light-safari-pill-border-color: rgba(0, 0, 0, 0.08); // Very subtle black border for light mode
+
+/* === Sticky Header === */
+// This class will be applied to the .masthead container
+.masthead-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000; // Ensures it stays above other content
+
+  // Default background for sticky header (DARK THEME)
+  background-color: rgba(0, 0, 0, 0.95);
+
+  @media (prefers-color-scheme: light) {
+    background-color: rgba(247, 246, 244, 0.95);
+  }
+}
+
+/* === Safari Pill Navigation Container === */
+// This class will be applied to the ul#navigation-list to make it the pill.
+.navigation-pill {
+  // Default colors for the pill (DARK THEME)
+  background-color: $safari-pill-bg;
+  border: $safari-pill-border-width solid $safari-pill-border-color;
+  border-radius: 9999px; // Ensures a perfect pill shape
+  padding: 8px 20px; // Adjust padding to give space around your links
+
+  // Backdrop filter for the frosted glass effect
+  backdrop-filter: blur($safari-pill-blur-amount);
+  -webkit-backdrop-filter: blur($safari-pill-blur-amount); // For Safari compatibility
+
+  // Ensures links inside are properly aligned within the pill
+  display: inline-flex; // Use inline-flex to make the pill shrink-wrap its content
+  align-items: center; // Vertically center content if links have varying heights
+
+  // Light mode adjustments for the pill
+  @media (prefers-color-scheme: light) {
+    background-color: $light-safari-pill-bg;
+    border-color: $light-safari-pill-border-color;
+  }
+}
+
+// Modify your existing .navigation-list li to remove horizontal margin
+// and apply padding to the links themselves, which looks better inside the pill.
+ul#navigation-list li {
+  display: inline; // Keep this
+  list-style: none; // Keep this
+  margin: 0; // Remove horizontal margin from the list item
+}
+
+// Apply padding directly to the navigation links for spacing within the pill
+nav a {
+  padding: 0 10px; // Add horizontal padding to the links
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
