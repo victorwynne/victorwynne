@@ -18,7 +18,7 @@ const POSTS_DIR = path.join(__dirname, '_posts');
 const SITE_BASE_URL = 'https://victorwynne.com';
 const DEFAULT_ICON_URL = 'https://victorwynne.com/assets/push-icon.png';
 
-const NOTIFY_IF_LESS_THAN_MINUTES_OLD = 30;
+const NOTIFY_IF_LESS_THAN_MINUTES_OLD = 15;
 
 // === Helper Functions ===
 function parseFrontMatter(fileContent) {
