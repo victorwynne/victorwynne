@@ -1,23 +1,21 @@
-// Inline code, code blocks and syntax highlighting
-
-/* Applies to inline `code blocks` */
+/* === Foundations === */
 .highlighter-rouge {
   font-family: $code-font-family;
-	font-size: 91%;
-	padding: 3px 3px;
+  font-size: 91%;
+  padding: 3px 3px;
   background-color: #434343;
   color: #ffffff;
-	white-space: nowrap;
+  white-space: nowrap;
   border-radius: .25em;
 
   @media (prefers-color-scheme: light) {
-  color: #2a2a2a;
-  background-color: $code-inline-bg-light;
+    color: #2a2a2a;
+    background-color: $code-inline-bg-light;
   }
 }
 
-/* Applies to all code */
-pre, code {
+pre,
+code {
   font-size: 14px;
   font-family: $code-font-family;
   font-style: normal;
@@ -27,17 +25,16 @@ pre, code {
   background-color: #eef;
 
   ::selection {
-  color: $code-block-bg;
-  background: #bdbdb3;
+    color: $code-block-bg;
+    background: #bdbdb3;
   }
 
   @media (prefers-color-scheme: light) {
-  background-color: $code-block-bg-light;
+    background-color: $code-block-bg-light;
+  }
 }
 
-}
-
-/* Inline code, no highlight */
+/* === Inline Code === */
 code {
   padding: 2px 4px;
   border-radius: 3px;
@@ -48,14 +45,13 @@ blockquote code {
   color: #656565;
 }
 
-/* Inline code, highlight */
 code.highlight {
   border-radius: 3px;
   color: #bdbdb3;
   background-color: $code-block-bg;
 }
 
-/* Block code, no highlight */
+/* === Block Code === */
 pre {
   border-radius: 5px;
   padding: 15px 17px;
@@ -63,157 +59,145 @@ pre {
   background-color: #f1f1ff;
 
   code {
-  border: 0;
-  padding: 0;
-  white-space: pre;
+    border: 0;
+    padding: 0;
+    white-space: pre;
   }
 }
 
-/* Block code, highlight */
-figure.highlight, div.highlight {
+/* === Highlight Containers === */
+figure.highlight,
+div.highlight {
   position: relative;
 
   pre {
-  background-color: $code-block-bg;
-	border: 1.5px solid $code-block-accent;
-	border-radius: 20px;
-	box-shadow: 0 4px 30px rgba(0,0,0,.4);
+    background-color: $code-block-bg;
+    border: 1.5px solid $code-block-accent;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .4);
 
-  @media (prefers-color-scheme: light) {
-  background-color: $code-block-bg-light;
-  border: 1.5px solid $code-block-accent-light;
-  }
+    @media (prefers-color-scheme: light) {
+      background-color: $code-block-bg-light;
+      border: 1.5px solid $code-block-accent-light;
+    }
 
-  code {
-  background-color: $code-block-bg;
-  color: #babaad;
+    code {
+      background-color: $code-block-bg;
+      color: #babaad;
+      counter-reset: code;
+      display: block;
+      line-height: 1.6;
 
-  counter-reset: code;
-  display: block;
-  line-height: 1.6;
+      @media (prefers-color-scheme: light) {
+        background-color: $code-block-bg-light;
+      }
 
-  @media (prefers-color-scheme: light) {
-  background-color: $code-block-bg-light;
-  }
+      &[data-lang]::before {
+        content: attr(data-lang);
+        position: absolute;
+        right: 20px;
+        font-size: 15px;
+        top: -14px;
+        padding: 2px 9px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 1px solid $code-block-accent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        min-width: 30px;
+        text-align: center;
+        color: #ffffff;
+        background-color: $code-block-bg;
 
-/* Display language name */
-  &[data-lang]::before {
-  content: attr(data-lang);
-  position: absolute;
-  right: 20px;
-  font-size: 15px;
-  top: -14px;
-	padding: 2px 9px;
-	text-transform: uppercase;
-	font-weight: bold;
-  border: 1px solid $code-block-accent;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  min-width: 30px;
-  text-align: center;
-  color: #ffffff;
-  background-color: $code-block-bg;
+        @media (prefers-color-scheme: light) {
+          border: 1px solid $code-block-accent-light;
+          color: #ffffff;
+          background-color: $code-block-bg-light;
+        }
 
-  @media (prefers-color-scheme: light) {
-  border: 1px solid $code-block-accent-light;
-  color: #ffffff;
-  background-color: $code-block-bg-light;
-  }
+        @mixin media-query($device) {
+          @media screen and (max-width: $device) {
+            @content;
+          }
+        }
 
-	@mixin media-query($device) {
-	@media screen and (max-width: $device) {
-	@content;
-	}
- }
+        @include media-query(300px) {
+          visibility: hidden;
+        }
+      }
 
-  @include media-query(300px) {
-  visibility: hidden;
+      div {
+        counter-increment: code;
+
+        &::before {
+          color: #608079;
+          content: counter(code);
+          width: 14px;
+          text-align: right;
+          display: inline-block;
+          margin-right: 30px * 0.4;
+          border-right: 1px solid #656565;
+          user-select: none;
+        }
+      }
+    }
   }
 }
 
-  div {
-  counter-increment: code;
-
-  /* Line numbers */
-  &::before {
-  color: #608079;
-  content: counter(code);
-
-  width: 14px;
-  text-align: right;
-
-  /* Add a nice border */
-  display: inline-block;
-  margin-right: 30px * 0.4;
-  border-right: 1px solid #656565;
-
-  /* For older browsers and Safari */
-  user-select: none;
-  }
-  }
-  }
- }
-}
-
-/* Hide language */
+/* === Hide Language Label === */
 .hide-lang + figure code::before {
   visibility: hidden;
 }
 
-/**
- * Language-specific settings
- */
-
+/* === Language-Specific Overrides === */
 .language-liquid {
   .p {
-  color: #6aaf50;
+    color: #6aaf50;
   }
 }
 
-/**
- * ID-specific overrides
- */
-
+/* === ID-Specific Overrides === */
 #c-example + figure {
   .kt {
-  color: #5180b3;
+    color: #5180b3;
   }
 }
 
 #liquid-example + figure {
   .p {
-  color: #bdbdb3;
+    color: #bdbdb3;
   }
 }
 
 #borders-example + figure {
   div {
-  &::before {
-  padding-left: 0.625em;
-  border-left: 1px solid #656565;
-  }
+    &::before {
+      padding-left: 0.625em;
+      border-left: 1px solid #656565;
+    }
 
-  &:first-of-type::before {
-  padding-top: 0.25em;
-  border-top: 1px solid #656565;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  }
+    &:first-of-type::before {
+      padding-top: 0.25em;
+      border-top: 1px solid #656565;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
 
-  &:last-of-type::before {
-  padding-bottom: 0.25em;
-  border-bottom: 1px solid #656565;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+    &:last-of-type::before {
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid #656565;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
   }
- }
 }
 
 #yaml-example + figure {
-  .na, .s {
-  color: #ab75c3;
+  .na,
+  .s {
+    color: #ab75c3;
   }
 }
 
