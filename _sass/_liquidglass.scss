@@ -3,6 +3,7 @@
 $safari-pill-bg: rgba(0, 0, 0, 0.4); // Semi-transparent black for default dark mode
 $safari-pill-border-color: rgba(255, 255, 255, 0.08); // Very subtle white border for default dark mode
 $safari-pill-blur-amount: 15px; // Adjust this value to your desired blur intensity
+$safari-pill-border-width: 1px;
 
 // Light mode specific colors for the pill background and border
 $light-safari-pill-bg: rgba(255, 255, 255, 0.75); // Slightly transparent white for light mode
