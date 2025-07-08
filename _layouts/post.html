@@ -4,37 +4,33 @@ layout: default
 
 <article class="post">
 
-{% if page.link %}
-<h2 class="post-title">{{ page.title | smartify }}</h2>
-  {% else %}
-<h2 class="post-title">{{ page.title | smartify }}</h2>
-  {% endif %}
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%A" }}, {{ page.date | date_to_long_string: "ordinal", "US" }}
+  <h2 class="post-title">{{ page.title | smartify }}</h2>
+
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+    {{ page.date | date: "%A" }}, {{ page.date | date_to_long_string: "ordinal", "US" }}
   </time>
 
   {% if page.link %}
-  <span class="source" role="doc-endnotes">source: <a href="{{ page.link }}">{{ page.link | remove:'http://' | remove:'www.' | remove:'https://' | split:'/' | first }}</a><span class="link-arrow"> ↗</span></span>
+    <span class="source">
+      source: 
+      <a href="{{ page.link }}">
+        {{ page.link | remove: 'http://' | remove: 'www.' | remove: 'https://' | split: '/' | first }}
+      </a>
+      <span class="link-arrow"> ↗</span>
+    </span>
   {% endif %}
-  <br>
-  {{ content | smartify }}
-  <br>
-  <div class="tag-list">
-  {% if post %}
-  {% assign tags = post.tags %}
-  {% else %}
-  {% assign tags = page.tags %}
-  {% endif %}
-  {% for tag in tags %}
-  <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
+
+  <div class="post-content">
+    {{ content | smartify }}
   </div>
 
-
-  {% if page.link %}
-  <br>
+  {% assign tags = page.tags %}
+  {% if tags %}
+    <div class="tag-list">
+      {% for tag in tags %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag | slugize }}">{{ tag }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+    </div>
   {% endif %}
-  
-<br>
 
 </article>
