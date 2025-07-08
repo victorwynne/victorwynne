@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Apple announces COO transition with Jeff Williams retirement"
-date: 2025-07-08 16:50
+date: 2025-07-08 19:30
 categories: [Links]
 tags: [apple, business]
 link: https://www.apple.com/newsroom/2025/07/apple-announces-chief-operating-officer-transition/
