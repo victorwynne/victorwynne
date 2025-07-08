@@ -13,6 +13,9 @@ kramdown:
 plugins:
   - jekyll-seo-tag
   - jekyll-target-blank
+  
+include:
+ - _headers 
 
 exclude:
   - .editorconfig
