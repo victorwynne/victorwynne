@@ -21,27 +21,10 @@ layout: compress
 
   <!-- === Google Analytics === -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-26NWWZ94DD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-26NWWZ94DD');
-  </script>
+  <script src="{{ site.baseurl }}/js/google-analytics.js" defer></script>
 
   <!-- === Service Worker Registration === -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('ServiceWorker registered! Scope:', registration.scope);
-          })
-          .catch(err => {
-            console.log('ServiceWorker registration failed:', err);
-          });
-      });
-    }
-  </script>
+  <script src="{{ site.baseurl }}/js/service-worker-registration.js" defer></script>
 
   <!-- === Structured Data: WebSite === -->
   <script type="application/ld+json">
@@ -149,14 +132,7 @@ layout: compress
 
   <!-- === OneSignal Push Notifications === -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(async function(OneSignal) {
-      await OneSignal.init({
-        appId: "1860e89f-f790-4e30-af88-ee26a306c7ea"
-      });
-    });
-  </script>
+  <script src="{{ site.baseurl }}/js/onesignal-setup.js" defer></script>
 
 </head>
 
@@ -199,20 +175,7 @@ layout: compress
   <script src="/register-sw.js"></script>
   
   <!-- === Gauges Analytics === -->
-  <script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.type  = 'text/javascript';
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '686d7e510d8510271228dc12');
-    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
-    t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
+  <script src="{{ site.baseurl }}/assets/js/gauges-analytics.js" defer></script>
 
 </body>
 </html>
