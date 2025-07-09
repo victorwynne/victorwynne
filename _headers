@@ -1,7 +1,10 @@
 /*
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 X-Frame-Options: DENY
+X-Permitted-Cross-Domain-Policies: none
 X-Content-Type-Options: nosniff
+Cross-Origin-Embedder-Policy: "unsafe-none"
+Cross-Origin-Opener-Policy: "same-origin"
 Referrer-Policy: strict-origin-when-cross-origin
 Cross-Origin-Resource-Policy: same-site
 Permissions-Policy: geolocation=(), midi=(), notifications=(self "https://onesignal.com" "https://*.os.tc"), push=(self "https://onesignal.com" "https://*.os.tc"), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), vibrate=(), fullscreen=(self), payment=()
