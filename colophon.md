@@ -2,6 +2,7 @@
 layout: page
 permalink: /colophon/
 title: Colophon
+description: Details about publishing, accessibility, and functionality for this website. Also includes a list of software I frequently use, and stats for number of blog posts.
 ---
 
 {% assign totalWords = 0 %}

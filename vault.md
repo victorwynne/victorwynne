@@ -2,6 +2,7 @@
 layout: page
 permalink: /vault/
 title: Vault
+description: Browse all of the blog posts I have authored for this website by publication date or topics they have been tagged with.
 ---
 
 <h3>Browse all the blog posts by <a href="/vault/">date</a> or <a href="/tags/">tag</a>.</h3>
