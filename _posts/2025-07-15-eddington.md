@@ -4,10 +4,10 @@ title: "Eddington"
 date: 2025-07-15 01:00
 categories: [Links]
 tags: [entertainment]
-description: This isn’t so much a review of Eddington as it is a counter-review of the linked piece by Lindsay Bahr. Movie reviews aren’t really my shtick, but I have some strong opinions about Eddington.
+description: This isn’t so much a review of Eddington as it is a counter-review of the linked piece by Lindsey Bahr. Movie reviews aren’t really my shtick, but I have some strong opinions about Eddington.
 ---
 
-This is really more of a counter-review of [this take by Lindsay Bahr](https://apnews.com/article/movie-review-eddington-aa0b3acd3a53a6d7af435ffd29ca6f12). Movie reviews aren’t really my shtick, but I have some strong opinions about this one.
+This is really more of a counter-review of [this take by Lindsey Bahr](https://apnews.com/article/movie-review-eddington-aa0b3acd3a53a6d7af435ffd29ca6f12). Movie reviews aren’t really my shtick, but I have some strong opinions about this one.
 
 Claiming this film leaves audiences scratching their heads is to fundamentally misunderstand its purpose. This is not a confusing or incoherent experience. Instead, it has an unmistakable message and a sharp understanding of today’s world, both apparently overlooked by the original reviewer. Rather than inducing a need for solitary reflection, it operates like a bright, honest mirror held up to society. It challenges viewers to face uncomfortable truths, rather than retreat from them.
 
