@@ -128,7 +128,7 @@ layout: compress
   {% if site.permalink contains ".htm" %}
     {% assign canonical_url = canonical_url | replace: ".htm", "" %}
   {% endif %}
-  <link rel="canonical" href="{{ canonical_url | relative_url }}">
+  <link rel="canonical" href="{{ canonical_url | absolute_url }}">
 
   <!-- === OneSignal Push Notifications === -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
