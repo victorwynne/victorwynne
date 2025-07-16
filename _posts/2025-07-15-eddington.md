@@ -2,7 +2,7 @@
 layout: post
 title: "Eddington"
 date: 2025-07-15 01:00
-categories: [Links]
+categories: [Articles]
 tags: [entertainment]
 description: This isn’t so much a review of Eddington as it is a counter-review of the linked piece by Lindsey Bahr. Movie reviews aren’t really my shtick, but I have some strong opinions about Eddington.
 ---

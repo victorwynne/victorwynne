@@ -2,7 +2,7 @@
 layout: post
 title: "Apple is ruining the open web"
 date: 2025-07-15 21:54
-categories: [Links]
+categories: [Articles]
 tags: [apple]
 description: Apple is defying the EU’s Digital Markets Act by blocking rival browser engines on iOS, protecting Safari’s immense profits. The result is the company ruining the open web.
 ---
