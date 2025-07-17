@@ -2,6 +2,7 @@
 layout: page
 permalink: /olena/
 title: Olena
+description: Olena is a distributed denial-of-service (DDoS) concept written in JavaScript.
 ---
 
 <p class="notice-guide">
