@@ -7,7 +7,7 @@ tags: [politics]
 description: Columbia addresses campus antisemitism by adopting the IHRA definition, but the move, tied to federal funding, raises questions about overly broad definitions and academic freedom.
 ---
 
-Columbia University’s recent adoption of the International Holocaust Remembrance Alliance (IHRA) definition of antisemitism has rightfully sparked a significant debate. While the university aims to address [real and documented concerns regarding antisemitism](https://www.theatlantic.com/ideas/archive/2025/03/columbia-antisemitism-israel-palestine-trump/682054/) on its campus, the specifics of this definition and the circumstances surrounding its implementation invite careful consideration.
+Columbia University’s recent adoption of the International Holocaust Remembrance Alliance (IHRA) definition of antisemitism has rightfully sparked a significant debate. While the university aims to address [real and documented concerns regarding antisemitism](https://www.theatlantic.com/ideas/archive/2025/03/columbia-antisemitism-israel-palestine-trump/682054/) on its campus, the specifics of this definition and the circumstances surrounding its implementation certainly require careful consideration.
 
 Reports from Jewish students detailing experiences of harassment and discrimination highlight an undeniable problem that universities must confront. Ensuring a safe and inclusive environment, free from prejudice, is a fundamental responsibility for any educational institution.
 
