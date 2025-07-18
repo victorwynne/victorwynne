@@ -8,10 +8,16 @@ title: Home
 {% for post in site.posts limit:19 %}
 <nav>
 <article class="post">
+
 <h2 class="post-title">
   <a href="{{ post.url }}">{{ post.title | smartify }}</a>
+  
   {% if post.categories contains 'Articles' %}
-    <span aria-hidden="true"> ✎</span>
+    <span aria-hidden="true"> ¶</span>
+  {% endif %}
+  
+  {% if post.categories contains 'Links' %}
+      <span aria-hidden="true"> ↗</span>
   {% endif %}
 </h2>
 
