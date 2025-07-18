@@ -157,7 +157,7 @@ figure {
     padding-bottom: 1px;
     padding-left: 5px;
     padding-right: 5px;
-    border: 1.5px solid $tag-border;
+    border: 1.75px solid $tag-border;
     border-radius: 0.5em;
     margin-bottom: 0.7rem;
     margin-right: 0.1rem;
@@ -167,7 +167,7 @@ figure {
     @media (prefers-color-scheme: light) {
       color: $light-scheme-accent;
       background-color: $light-scheme-tag-bg;
-      border: 1.5px solid $light-scheme-tag-border;
+      border: 1.75px solid $light-scheme-tag-border;
     }
   }
 
@@ -179,8 +179,8 @@ figure {
     padding-bottom: 1px;
     padding-left: 5px;
     padding-right: 5px;
-    border: 1.5px solid $tag-border;
-    border-radius: 0.25em;
+    border: 1.75px solid $tag-border;
+    border-radius: 0.5em;
     margin-bottom: 0.7rem;
     margin-right: 0.1rem;
     font-size: 100%;
@@ -188,7 +188,7 @@ figure {
     @media (prefers-color-scheme: light) {
       color: $light-scheme-accent;
       background-color: $light-scheme-tag-bg;
-      border: 1.5px solid $light-scheme-tag-border;
+      border: 1.75px solid $light-scheme-tag-border;
     }
   }
 }
