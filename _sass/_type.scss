@@ -176,7 +176,7 @@ blockquote {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
-  border-bottom-left-radius: 0.1em;
+  border-bottom-left-radius: 0.25em;
 
   @media (prefers-color-scheme: light) {
     background-color: $light-scheme-blockquote-bg;
