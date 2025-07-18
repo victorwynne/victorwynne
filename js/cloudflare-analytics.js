@@ -1,1 +1,0 @@
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d5d0f1abb9a4417893c47a2a608199e"}'></script>
