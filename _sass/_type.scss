@@ -173,9 +173,9 @@ blockquote {
   margin: 20px 0;
   font-size: 92%;
   position: relative;
-  border-top-left-radius: 0.5em;
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
   border-bottom-left-radius: 0.1em;
 
   @media (prefers-color-scheme: light) {
