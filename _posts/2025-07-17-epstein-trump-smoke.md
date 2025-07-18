@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Epstein, Trump, and the smokescreen"
-date: 2025-07-17 21:35
+date: 2025-07-17 20:36
 categories: [Articles]
 tags: [politics]
 description: Exploring the recent Trump and Epstein controversies, from a suggestive letter to White House efforts to control information, raising further questions about a potential cover-up.
