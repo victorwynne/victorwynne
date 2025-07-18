@@ -173,10 +173,10 @@ blockquote {
   margin: 20px 0;
   font-size: 92%;
   position: relative;
-  border-top-left-radius: 2em;
-  border-top-right-radius: 2em;
-  border-bottom-right-radius: 2em;
-  border-bottom-left-radius: 0.25em;
+  border-top-left-radius: 5em;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  border-bottom-left-radius: 0.5em;
 
   @media (prefers-color-scheme: light) {
     background-color: $light-scheme-blockquote-bg;
