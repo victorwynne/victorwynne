@@ -189,6 +189,25 @@ blockquote {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
   }
+
+/* === Chat bubble tail === */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid $blockquote-bg;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  @media (prefers-color-scheme: light) {
+    &::after {
+      border-top-color: $light-scheme-blockquote-bg;
+    }
+  }
 }
 
 /* === Figures === */
