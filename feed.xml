@@ -20,7 +20,7 @@ layout: none
                     ]]>
 </description>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-             <link>{{ site.url }}{{ post.url }}?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=blog_posts</link>
+             <link>{{ site.url }}{{ post.url }}?utm_source=rss&amp;utm_medium=feed&amp;utm_campaign=blog</link>
 
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
