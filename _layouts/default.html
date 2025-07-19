@@ -21,7 +21,12 @@ layout: compress
 
   <!-- === Google Analytics === -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-26NWWZ94DD"></script>
-  <script src="{{ site.baseurl }}/js/google-analytics.js" defer></script>
+  <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-26NWWZ94DD');
+  </script>
 
   <!-- === Service Worker Registration === -->
   <script src="{{ site.baseurl }}/js/service-worker-registration.js" defer></script>
