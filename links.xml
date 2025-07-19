@@ -12,9 +12,13 @@ layout: none
 			{% if post.link %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
-				<description>{{ post.content | xml_escape }}<br>
-Permalink: <a href="{{ site.url }}{{ post.url }}">⌘</a>
-				</description>
+				<description>
+                    <![CDATA[
+                        {{ post.content }}
+                        <br />
+Permalink: <a href="{{ site.url }}{{ post.url }}"> ⌘</a>
+                    ]]>
+                </description>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 				<link>{{ post.link | escape }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
