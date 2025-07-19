@@ -7,7 +7,7 @@ tags: [humor]
 description: In which the en dash responds to the dramatic ramblings, and character assassination put forth by the em dash article.
 ---
 
-Regarding the derogatory en dash comments made in ‘[The Em Dash Responds to the AI Allegations](https://www.mcsweeneys.net/articles/the-em-dash-responds-to-the-ai-allegations)’ written by Greg Mania.
+Regarding the derogatory en dash comments made in ‘[The Em Dash Responds to the AI Allegations](https://www.mcsweeneys.net/articles/the-em-dash-responds-to-the-ai-allegations)’, written by Greg Mania.
 
 Honestly, while my show-off sibling, the em dash, was having its big dramatic moment, complaining about being “slandered” and how it’s just so misunderstood, I was quietly doing my job. You know, the important work. The stuff that actually brings clarity and precision to your sentences.
 
@@ -22,4 +22,5 @@ Honestly, at least the hyphen knows its place. Short, sweet, and to the point wh
 So, while the em dash is busy defending its dramatic reputation, I’ll be right here, the unsung hero, making sure your writing is clear, precise, and totally free from any wild accusations of being written by ChatGPT. Because when it comes to subtle power and undeniable usefulness, I’m the punctuation mark you really ought to be appreciating.
 
 Signed,
+
 The En Dash
