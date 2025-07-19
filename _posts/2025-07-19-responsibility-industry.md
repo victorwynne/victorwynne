@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A responsibility to the industry"
-date: 2025-07-19 13:50
+date: 2025-07-19 13:51
 categories: [Links]
 tags: [apple, design]
 link: https://lmnt.me/blog/a-responsibility-to-the-industry.html
