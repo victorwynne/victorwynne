@@ -118,7 +118,11 @@ gtag('config', 'G-26NWWZ94DD');
   <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicon.ico">
   <link rel="icon" href="{{ site.baseurl }}/assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/assets/favicon-96x96.png">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
+  
+  <!-- === RSS Feeds === -->
+  <link rel="alternate" type="application/atom+xml" title="All Posts" href="{{ site.baseurl }}/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="Articles Only" href="{{ site.baseurl }}/articles.xml">
+  <link rel="alternate" type="application/atom+xml" title="Linked List" href="{{ site.baseurl }}/links.xml">
 
   <!-- === Canonical URL === -->
   {% assign canonical_url = site.url | append: page.url | replace: "/index.html", "/" %}
