@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "From Young Cardamom to City Hall"
-date: 2025-07-20 12:00
+date: 2025-07-19 16:30
 categories: [Articles]
 tags: [politics]
 description: Zohran Mamdani’s rise says less about his political skill and more about the collapse of New York’s Democratic establishment. When the old guard crumbles, the fringe finds its opening.
