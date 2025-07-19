@@ -4,7 +4,7 @@ title: "The En Dash Responds to the Character Assassination"
 date: 2025-07-19 00:15
 categories: [Articles]
 tags: [humor]
-description: In which the en dash responds to the dramatic ramblings, and character assassination put forth by the em dash.
+description: In which the en dash responds to the dramatic ramblings, and character assassination put forth by the em dash article.
 ---
 
 Regarding the derogatory en dash comments made in ‘[The Em Dash Responds to the AI Allegations](https://www.mcsweeneys.net/articles/the-em-dash-responds-to-the-ai-allegations)’ written by Greg Mania.
