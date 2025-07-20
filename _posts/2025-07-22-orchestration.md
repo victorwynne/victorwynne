@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The next evolution for LLMs isn’t scale, it’s orchestration"
+title: "Orchestration, not scale, defines the next phase of LLMs"
 date: 2025-07-22 10:00
 categories: [Articles]
 tags: [language models]
