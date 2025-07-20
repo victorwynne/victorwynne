@@ -1,1 +1,0 @@
-[Netlify Status](https://app.netlify.com/projects/victorwynne/deploys)
