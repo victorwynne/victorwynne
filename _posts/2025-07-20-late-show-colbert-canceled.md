@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A few thoughts on The Late Show being canceled"
-date: 2025-07-20 19:55
+date: 2025-07-20 19:56
 categories: [Links]
 tags: [entertainment]
 link: https://www.wsj.com/business/media/stephen-colbert-late-show-canceled-profit-3dcc48a2?st=TT3iun
