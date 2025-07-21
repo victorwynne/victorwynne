@@ -7,7 +7,7 @@ tags: [language models]
 description: The next evolution for LLMs depends on full orchestration and the ability to manage complex tasks with minimal user input.
 ---
 
-Large language models (LLMs) have rapidly become an important part of modern computing. These sophisticated applications often produce responses that feel remarkably insightful and relevant. While their interactions may appear straightforward on the surface, a closer look reveals surprisingly complex internal processes involving a kind of low-level orchestration that occurs behind the scenes.
+Large language models (LLMs) have rapidly become an important part of modern computing. These sophisticated applications often produce responses that feel remarkably insightful and relevant. While their interactions may appear straightforward on the surface, a closer look reveals surprisingly complex internal processes involving a kind of low-level procedural execution that occurs behind the scenes.
 
 When a person submits a query to an LLM, the model is not simply pulling a pre-written answer from a vast database. Instead, it engages in a series of coordinated actions. For instance, if a question requires information beyond its immediate training data, the system might internally decide to search for that information, process it, and then integrate it into a meaningful response. This sequence of identifying a knowledge gap, seeking external data, and synthesizing it within its own generative process represents a significant form of internal management. It is an active problem solving loop, executed step by step to arrive at a useful output.
 
