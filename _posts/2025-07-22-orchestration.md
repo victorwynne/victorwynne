@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Orchestration, not scale, defines the next phase of LLMs"
+title: "Orchestration, not scale, will define the next phase of LLMs"
 date: 2025-07-22 10:00
 categories: [Articles]
 tags: [language models]
@@ -11,9 +11,9 @@ Large language models (LLMs) have rapidly become an important part of modern com
 
 When a person submits a query to an LLM, the model is not simply pulling a pre-written answer from a vast database. Instead, it engages in a series of dynamic operations. For instance, if a prompt calls for knowledge beyond its training data, the application may determine the need to retrieve external content, analyze it, and integrate it into a meaningful response. This sequence, which includes detecting informational gaps, sourcing new data, and synthesizing results, reflects an active and layered reasoning process rather than a static lookup. It is a stepwise method of resolving queries through logical chaining that ultimately produces an output aligned with the user’s intent.
 
-In handling more complex prompts, such as multi-part creative or analytical tasks, LLMs must coordinate distinct phases of activity. Consider a request to write a long-form poem in a particular style, followed by a summary of its central theme. The system must first engage in imaginative composition, then shift into interpretive analysis, and finally condense the result into a coherent synopsis. These transitions require not only linguistic skill but also structural awareness. It needs to track outputs, preserve context, and order operations in a way that delivers a unified response.
+In handling more complex prompts, such as multi-part creative or analytical tasks, LLMs must coordinate distinct phases of activity. Consider a request to write a long-form poem in a particular style, followed by a summary of its central theme. The system must first engage in imaginative composition, then shift into interpretive analysis, and finally condense the result into a coherent synopsis. These transitions require not only linguistic skill but also structural awareness. It needs to track outputs, preserve context, and order operations in a way that provides a unified response.
 
-Crucially, this becomes even more critical during sustained interactions. In extended conversations, an LLM must manage continuity over time by recalling earlier turns and ensuring coherence. It has to track evolving user intent, respond to changes in tone or focus, and connect new inputs to prior context. Without this ongoing, inherent coordination, discussions would quickly become disjointed. Effective dialogue, even with current limitations, relies on this underlying scaffolding to simulate a natural conversational flow.
+Crucially, this becomes even more critical during sustained interactions. In extended conversations, an LLM must manage continuity over time by recalling earlier turns and ensuring coherence. It has to follow evolving user intent, respond to changes in tone or focus, and connect new inputs to prior context. Without this ongoing, inherent coordination, discussions would quickly become disjointed. Effective dialogue, even with current limitations, relies on this underlying scaffolding to simulate a natural conversational flow.
 
 However, despite these advancements, a considerable portion of higher-level oversight still falls to the user. Selecting the right tool, managing the order of operations, and integrating results across prompts remain largely manual. When different applications or agents are involved, whether for brainstorming, research, or drafting, individuals must coordinate each step themselves, often with minimal support from the system.
 
