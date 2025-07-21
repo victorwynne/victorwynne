@@ -3,7 +3,7 @@ layout: post
 title: "Anthropic destroyed millions of print books to build its AI models"
 date: 2025-06-25 22:14
 categories: [Links]
-tags: [business]
+tags: [business, language models]
 link: https://arstechnica.com/ai/2025/06/anthropic-destroyed-millions-of-print-books-to-build-its-ai-models/
 description: Anthropic cut millions of print books from their bindings, scanned them into digital files, and threw away the originals solely for the purpose of training AI.
 ---

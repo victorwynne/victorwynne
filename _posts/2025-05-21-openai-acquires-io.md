@@ -3,7 +3,7 @@ layout: post
 title:  "OpenAI acquires Jony Ive’s AI startup"
 date:   2025-05-21 16:20
 categories: [Links]
-tags: [business, io]
+tags: [business, io, language models]
 link: https://www.wallpaper.com/tech/welcome-to-io-openai-acquires-jony-ives-secret-startup-to-shape-the-form-of-future-ai
 ---
 

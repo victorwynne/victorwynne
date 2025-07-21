@@ -3,7 +3,7 @@ layout: post
 title:  "Elon Musk is livid about new OpenAI/Apple deal"
 date:   2024-06-11 21:42
 categories: [Links]
-tags: [business]
+tags: [business, language models]
 link: https://arstechnica.com/tech-policy/2024/06/elon-musk-is-livid-about-new-openai-apple-deal/
 ---
 
