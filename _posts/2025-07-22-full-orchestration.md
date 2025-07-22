@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Orchestration, not scale, will define the next phase of LLMs"
-date: 2025-07-22 10:00
+title: "LLMs must evolve from scaling to full orchestration"
+date: 2025-07-22 08:00
 categories: [Articles]
 tags: [language models]
 description: The next evolution for LLMs depends on full orchestration and the ability to manage complex tasks with minimal user input.
@@ -19,7 +19,7 @@ However, despite these advancements, a considerable portion of higher-level over
 
 The overhead requirements become especially apparent in workflows that span multiple domains. Consider a person planning a detailed project: they might use one LLM to generate ideas, another to explore relevant technologies, and a third to organize a proposal. Each phase demands judgment about which tool to invoke, what instructions to give, and how to transition information across contexts. The burden of orchestration rests heavily on the user. As a result, the overall experience can feel fragmented, even when the components themselves perform well, largely because there is often no unifying framework to connect them.
 
-This fragmentation underscores the growing need for full orchestration. For LLMs to become truly indispensable in daily and professional contexts, they must evolve into platforms capable of managing workflows from beginning to end with minimal human direction. Their value would increase significantly if they could interpret a broad objective and autonomously manage the necessary subcomponents to achieve it. Full orchestration entails empowering the AI to research, plan, execute, and iterate based on a single high-level instruction.
+This fragmentation underscores the growing need for full orchestration. For LLMs to become truly indispensable in daily and professional contexts, they must evolve into platforms capable of managing workflows from beginning to end with minimal human direction. Their value would increase significantly if they could interpret a broad objective and autonomously manage the necessary subcomponents to achieve it. This entails empowering the AI to research, plan, execute, and iterate based on a single high-level instruction.
 
 Progress in this direction is already underway. Frameworks such as [LangChain](https://www.langchain.com), [CrewAI](https://www.crewai.com/), and [AutoGen](https://microsoft.github.io/autogen/stable/index.html) are advancing task automation by allowing developers to chain LLM calls, incorporate external APIs or data sources, and maintain contextual state across interactions. While these tools still require significant configuration and oversight, they represent meaningful steps toward more autonomous systems.
 
