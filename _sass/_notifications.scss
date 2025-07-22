@@ -19,16 +19,7 @@
   }
 
   .notification-popup-content {
-    background: $bg;
-
-    @media (prefers-color-scheme: light) {
-    background-color: $light-scheme-bg;
-    
-    color: $text;
-
-    @media (prefers-color-scheme: light) {
-    color: $light-scheme-text;
-    
+    // Default properties for the content box
     padding: 30px;
     border-radius: 10px;
     max-width: 90%;
@@ -37,7 +28,19 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transform: translateY(0);
     transition: transform 0.3s ease-out;
+
+    // Background and text color based on preferred scheme
+    background-color: $bg; // Fallback or dark mode default
+    color: $text; // Fallback or dark mode default
+
+    @media (prefers-color-scheme: light) {
+      background-color: $light-scheme-bg;
+      color: $light-scheme-text;
+    }
   }
+  // This closing brace closes the .notification-popup-content block
+  // The rest of the rules are for child elements or modified states
+  // of #notification-popup or .notification-popup-content
 
   &.hidden .notification-popup-content {
     transform: translateY(20px);
@@ -46,11 +49,11 @@
   h3 {
     margin-top: 0;
     font-size: 1.5em;
-    color: inherit;
+    color: inherit; // Inherits from .notification-popup-content
   }
 
   p {
-    color: inherit;
+    color: inherit; // Inherits from .notification-popup-content
     line-height: 1.5;
     margin-bottom: 20px;
   }
@@ -87,4 +90,4 @@
     background-color: #5a6268;
     border-color: #5a6268;
   }
-}
+} // This closing brace closes the #notification-popup block
