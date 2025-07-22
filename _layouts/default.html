@@ -143,14 +143,20 @@ gtag('config', 'G-26NWWZ94DD');
 
   <!-- === OneSignal Push Notifications === -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
+        autoPrompt: false,
+        promptOptions: {
+          slidedown: { enabled: false },
+          fullscreen: { enabled: false },
+          subscriptionBell: { enabled: false },
+        },
+      });
     });
-  });
-</script>
+  </script>
 
 </head>
 
@@ -188,6 +194,19 @@ gtag('config', 'G-26NWWZ94DD');
     </footer>
 
   </div>
+  
+  <!-- === Push Notifications Prompt === -->
+  <div id="notification-popup" class="hidden">
+    <div class="notification-popup-content">
+      <h3>Subscribe!</h3>
+      <p>Would you like to receive push notifications for new blog posts?</p>
+      <button id="enable-notifications-btn" class="popup-button primary">Subscribe</button>
+      <button id="no-thanks-btn" class="popup-button secondary">Maybe Later</button>
+    </div>
+  </div>
+
+  <script src="{{ '/notifications.js' | relative_url }}" defer></script>
+   
   
   <!-- === Cloudflare Analytics === -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d5d0f1abb9a4417893c47a2a608199e"}'></script>
