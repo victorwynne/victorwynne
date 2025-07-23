@@ -36,9 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Popup Control Functions ---
     function showPopup() {
-        // Ensure it's displayed as flex before removing 'hidden' for transition
         notificationPopup.style.display = 'flex';
-        // A tiny delay can help ensure the display property is applied before transition starts
         requestAnimationFrame(() => {
             notificationPopup.classList.remove('hidden');
         });
@@ -46,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function hidePopup() {
         notificationPopup.classList.add('hidden');
-        // Wait for the transition to complete before setting display: none
         notificationPopup.addEventListener('transitionend', function handler() {
             notificationPopup.style.display = 'none';
             notificationPopup.removeEventListener('transitionend', handler);
@@ -60,10 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ensure OneSignal is loaded before attempting to use it
     window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(function(OneSignal) {
+    OneSignalDeferred.push(async function(OneSignal) {
+        // Wait for the OneSignal SDK to be fully initialized and ready to use.
+        // The await OneSignal.init() in your HTML handles this for the OneSignalDeferred.push context.
+        // However, we can add an additional check to ensure Notifications object is fully ready.
 
-        // Get current notification permission status from OneSignal
-        OneSignal.Notifications.getPermission().then(function(permission) {
+        // Use OneSignal.Notifications.getPermission() directly, it should be available now.
+        try {
+            const permission = await OneSignal.Notifications.getPermission(); // Await ensures it's resolved
             console.log('OneSignal Notification Permission on load:', permission);
 
             // If permission is 'default' (not asked yet) AND user hasn't explicitly declined before
@@ -73,34 +74,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If permission is already granted or denied, or user declined before, ensure popup is hidden
                 hidePopup();
             }
-        });
+        } catch (error) {
+            console.error("Error getting OneSignal notification permission:", error);
+            // Fallback: hide popup if there's an error getting permission status
+            hidePopup();
+        }
 
         // Event listener for "Enable Notifications" button in your popup
         if (enableButton) {
-            enableButton.addEventListener('click', function() {
-                // This user click acts as the required gesture for iOS PWA
-                OneSignal.Notifications.requestPermission().then(function(permission) {
+            enableButton.addEventListener('click', async function() { // Made async to await requestPermission
+                try {
+                    const permission = await OneSignal.Notifications.requestPermission(); // Await this call
                     if (permission === 'granted') {
                         console.log('OneSignal Notification permission granted after user click!');
                         hidePopup(); // Hide the popup
-                        // Example: Set a badge of '1' after successful subscription
-                        setAppBadge(1);
-                        // OneSignal usually handles subscription automatically if allowed
+                        setAppBadge(1); // Set badge
                     } else if (permission === 'denied') {
                         console.warn('OneSignal Notification permission denied by user.');
                         alert('Notifications denied. Please enable them manually in your iPhone Settings > Notifications for this app if you change your mind.');
                         hidePopup(); // Hide the popup
-                        localStorage.setItem('userDeclinedNotifications', 'true'); // Remember user preference
+                        localStorage.setItem('userDeclinedNotifications', 'true');
                         clearAppBadge(); // Clear badge if they denied
-                    } else { // 'default' (user dismissed native prompt without granting or denying)
+                    } else { // 'default' (user dismissed native prompt)
                         console.log('OneSignal Notification permission request dismissed.');
                         hidePopup(); // Hide the popup
-                        // Do NOT set userDeclinedNotifications here, as they might just want to be asked later.
                     }
-                }).catch(function(error) {
+                } catch (error) {
                     console.error('Error requesting OneSignal notification permission:', error);
                     hidePopup(); // Hide the popup on error
-                });
+                }
             });
         }
 
@@ -108,26 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (noThanksButton) {
             noThanksButton.addEventListener('click', function() {
                 console.log('User explicitly declined notifications via custom popup.');
-                hidePopup(); // Hide the popup
-                localStorage.setItem('userDeclinedNotifications', 'true'); // Remember user preference
-                clearAppBadge(); // Clear badge if they explicitly say no
+                hidePopup();
+                localStorage.setItem('userDeclinedNotifications', 'true');
+                clearAppBadge();
             });
         }
-
-        // --- Example Badging Trigger (Optional) ---
-        // This is where you'd trigger badge updates based on your app's logic.
-        // For instance, if you have an unread count from a backend:
-        /*
-        // Call this when your app gets new unread messages
-        function updateUnreadCountAndBadge(count) {
-            if (count > 0) {
-                setAppBadge(count);
-            } else {
-                clearAppBadge();
-            }
-        }
-        // Example: Call updateUnreadCountAndBadge(5) when user logs in and has 5 unread items
-        */
-        // --- End Example Badging Trigger ---
     });
 });
