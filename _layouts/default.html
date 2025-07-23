@@ -144,21 +144,20 @@ gtag('config', 'G-26NWWZ94DD');
   <!-- === OneSignal Push Notifications === -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
-    });
-    
-    // Trigger notification prompt when user scrolls down 100px
-    let hasPrompted = false;
-    window.addEventListener('scroll', function() {
-      if (!hasPrompted && window.scrollY > 100) {
-        hasPrompted = true;
-        OneSignal.showNativePrompt();
-      }
-    }, { once: true });
+window.OneSignalDeferred = window.OneSignalDeferred || [];
+OneSignalDeferred.push(async function(OneSignal) {
+  await OneSignal.init({
+    appId: "1860e89f-f790-4e30-af88-ee26a306c7ea"
   });
+  
+  let hasPrompted = false;
+  window.addEventListener('scroll', function() {
+    if (!hasPrompted && window.scrollY > 100) {
+      hasPrompted = true;
+      OneSignal.showNativePrompt();
+    }
+  }, { once: true });
+});
 </script>
 
 </head>
