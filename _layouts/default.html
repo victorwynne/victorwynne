@@ -146,45 +146,9 @@ gtag('config', 'G-26NWWZ94DD');
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function(OneSignal) {
-    // Add this line for verbose logging:
-    OneSignal.Debug.setLogLevel('verbose'); // This will make OneSignal very chatty in the console
-
     await OneSignal.init({
       appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
-      // Optional: Explicitly enable slidedown for testing, though it's usually default
-      // promptOptions: {
-      //   slidedown: {
-      //     enabled: true,
-      //     autoPrompt: true,
-      //     // For debugging, you might remove any time delays or page view requirements
-      //     // force: true // Use with caution, forces prompt on every load
-      //   }
-      // }
     });
-
-    // Add these lines to log the service worker and notification permission status
-    try {
-      const workerState = await OneSignal.ServiceWorker.getStatus();
-      console.log("OneSignal Service Worker Status:", workerState);
-    } catch (e) {
-      console.error("Error getting OneSignal Service Worker Status:", e);
-    }
-
-    try {
-      const permission = await OneSignal.Notifications.getPermission();
-      console.log("OneSignal Notification Permission Status:", permission);
-    } catch (e) {
-      console.error("Error getting OneSignal Notification Permission Status:", e);
-    }
-
-    // You can also add an event listener to see if the prompt is shown
-    OneSignal.on('promptclick', function(event) {
-      console.log('OneSignal prompt clicked:', event);
-    });
-    OneSignal.on('notificationpermissionchange', function(permissionChange) {
-      console.log('OneSignal notification permission changed:', permissionChange.to);
-    });
-
   });
 </script>
 
