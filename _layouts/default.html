@@ -225,6 +225,22 @@ document.addEventListener('visibilitychange', function() {
 });
 </script>
 
+<!-- === Debug Subscription Status === -->
+<script>
+OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.User.pushSubscription.addEventListener('change', (event) => {
+        console.log('Subscription changed:', event.current.id);
+        console.log('Subscription token:', event.current.token);
+    });
+    
+    // Also check current subscription status
+    setTimeout(() => {
+        console.log('Current subscription ID:', OneSignal.User.pushSubscription.id);
+        console.log('Current subscription token:', OneSignal.User.pushSubscription.token);
+    }, 3000);
+});
+</script>
+
 </head>
 
 <body>
