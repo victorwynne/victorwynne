@@ -152,19 +152,6 @@ gtag('config', 'G-26NWWZ94DD');
   });
 </script>
 
-<!-- === Native Push Notifications Prompt === -->
-<script>
-function enableNotificationsPush() {
-    OneSignalDeferred.push(async function(OneSignal) {
-        try {
-            await OneSignal.Notifications.requestPermission();
-        } catch (error) {
-            console.error('Error requesting permission:', error);
-        }
-    });
-}
-</script>
-
 </head>
 
 <body>
@@ -200,16 +187,12 @@ function enableNotificationsPush() {
       <p>
       
       Made with love in New York<br>
-      <a href="#" onclick="enableNotificationsPush(); return false;">Enable Push Notifications</a><br>
       © 2019 - {{ "now" | date: "%Y" }}
       
       </p>
     </footer>
 
   </div>
-
-  <!-- === Cloudflare Analytics === -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2d5d0f1abb9a4417893c47a2a608199e"}'></script>
 
 </body>
 </html>
