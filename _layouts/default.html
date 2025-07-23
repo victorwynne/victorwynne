@@ -149,13 +149,6 @@ gtag('config', 'G-26NWWZ94DD');
     await OneSignal.init({
       appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
     });
-    
-    // Check if permissions are already granted or denied
-    const permission = await OneSignal.Notifications.permission;
-    if (permission === 'default') {
-      // Only request if not previously denied
-      OneSignal.Notifications.requestPermission();
-    }
   });
 </script>
 
