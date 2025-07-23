@@ -146,9 +146,15 @@ gtag('config', 'G-26NWWZ94DD');
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
-    });
+    try {
+      alert('Starting OneSignal init...');
+      await OneSignal.init({
+        appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
+      });
+      alert('OneSignal initialized successfully!');
+    } catch (error) {
+      alert('OneSignal failed: ' + error.message);
+    }
   });
 </script>
 
