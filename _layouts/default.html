@@ -144,85 +144,12 @@ gtag('config', 'G-26NWWZ94DD');
 <!-- === OneSignal === -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
-window.OneSignalDeferred = window.OneSignalDeferred || [];
-OneSignalDeferred.push(async function(OneSignal) {
-  await OneSignal.init({
-    appId: "1860e89f-f790-4e30-af88-ee26a306c7ea"
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "1860e89f-f790-4e30-af88-ee26a306c7ea",
+    });
   });
-});
-</script>
-
-<!-- === Native Push Notifications Prompt === -->
-<script>
-function enableNotificationsPush() {
-    OneSignalDeferred.push(async function(OneSignal) {
-        try {
-            await OneSignal.Notifications.requestPermission();
-        } catch (error) {
-            console.error('Error requesting permission:', error);
-        }
-    });
-}
-</script>
-
-<!-- === App Badging API === -->
-<script>
-// Check if App Badging API is supported
-function isBadgingSupported() {
-    return 'setAppBadge' in navigator;
-}
-
-// Set badge with unread count
-function setBadge(count) {
-    if (isBadgingSupported()) {
-        if (count > 0) {
-            navigator.setAppBadge(count);
-        } else {
-            navigator.clearAppBadge();
-        }
-    }
-}
-
-// Clear the badge
-function clearBadge() {
-    if (isBadgingSupported()) {
-        navigator.clearAppBadge();
-    }
-}
-
-// Track unread count
-function getCurrentUnreadCount() {
-    return parseInt(localStorage.getItem('unreadCount') || '0');
-}
-
-function incrementUnreadCount() {
-    let count = getCurrentUnreadCount() + 1;
-    localStorage.setItem('unreadCount', count.toString());
-    setBadge(count);
-}
-
-function resetUnreadCount() {
-    localStorage.setItem('unreadCount', '0');
-    clearBadge();
-}
-
-// Integrate with OneSignal
-OneSignalDeferred.push(function(OneSignal) {
-    OneSignal.Notifications.addEventListener('click', function(event) {
-        resetUnreadCount();
-    });
-    
-    OneSignal.Notifications.addEventListener('foregroundWillDisplay', function(event) {
-        incrementUnreadCount();
-    });
-});
-
-// Clear badge when user visits the page
-document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) {
-        resetUnreadCount();
-    }
-});
 </script>
 
 </head>
@@ -260,7 +187,6 @@ document.addEventListener('visibilitychange', function() {
       <p>
       
       Made with love in New York<br>
-      <a href="#" onclick="enableNotificationsPush(); return false;">Enable Push Notifications</a><br>
       © 2019 - {{ "now" | date: "%Y" }}
       
       </p>
