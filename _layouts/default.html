@@ -165,6 +165,66 @@ function enableNotificationsPush() {
 }
 </script>
 
+<!-- === App Badging API === -->
+<script>
+// Check if App Badging API is supported
+function isBadgingSupported() {
+    return 'setAppBadge' in navigator;
+}
+
+// Set badge with unread count
+function setBadge(count) {
+    if (isBadgingSupported()) {
+        if (count > 0) {
+            navigator.setAppBadge(count);
+        } else {
+            navigator.clearAppBadge();
+        }
+    }
+}
+
+// Clear the badge
+function clearBadge() {
+    if (isBadgingSupported()) {
+        navigator.clearAppBadge();
+    }
+}
+
+// Track unread count
+function getCurrentUnreadCount() {
+    return parseInt(localStorage.getItem('unreadCount') || '0');
+}
+
+function incrementUnreadCount() {
+    let count = getCurrentUnreadCount() + 1;
+    localStorage.setItem('unreadCount', count.toString());
+    setBadge(count);
+}
+
+function resetUnreadCount() {
+    localStorage.setItem('unreadCount', '0');
+    clearBadge();
+}
+
+// Integrate with OneSignal
+OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.Notifications.addEventListener('click', function(event) {
+        resetUnreadCount();
+    });
+    
+    OneSignal.Notifications.addEventListener('foregroundWillDisplay', function(event) {
+        incrementUnreadCount();
+    });
+});
+
+// Clear badge when user visits the page
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        resetUnreadCount();
+    }
+});
+</script>
+
 </head>
 
 <body>
