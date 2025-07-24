@@ -23,58 +23,27 @@ class ThemeToggle {
 
         window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => {
             if (this.theme === 'auto') {
-                this.applyTheme();
             }
         });
     }
 
     applyTheme() {
         const root = document.documentElement;
+        root.removeAttribute('data-theme');
+        root.style.colorScheme = '';
         
-        root.removeAttribute('data-forced-theme');
-        
-        if (this.theme !== 'auto') {
-
-            root.setAttribute('data-forced-theme', this.theme);
-
-            this.injectThemeOverride();
+        if (this.theme === 'auto') {
         } else {
-            this.removeThemeOverride();
+            root.setAttribute('data-theme', this.theme);
+            this.forceTheme();
         }
-
+        
         localStorage.setItem(this.storageKey, this.theme);
     }
 
-    injectThemeOverride() {
-        this.removeThemeOverride();
-        
-        const style = document.createElement('style');
-        style.id = 'theme-override';
-        
-        if (this.theme === 'light') {
-            style.textContent = `
-                html[data-forced-theme="light"] { color-scheme: light !important; }
-                @media (prefers-color-scheme: dark) {
-                    html[data-forced-theme="light"] { color-scheme: light !important; }
-                }
-            `;
-        } else if (this.theme === 'dark') {
-            style.textContent = `
-                html[data-forced-theme="dark"] { color-scheme: dark !important; }
-                @media (prefers-color-scheme: light) {
-                    html[data-forced-theme="dark"] { color-scheme: dark !important; }
-                }
-            `;
-        }
-        
-        document.head.appendChild(style);
-    }
-
-    removeThemeOverride() {
-        const existingStyle = document.getElementById('theme-override');
-        if (existingStyle) {
-            existingStyle.remove();
-        }
+    forceTheme() {
+        const root = document.documentElement;
+        root.style.colorScheme = this.theme;
     }
 
     toggleTheme() {
@@ -91,7 +60,7 @@ class ThemeToggle {
         }
         
         this.applyTheme();
-
+        
         const toggleButton = document.querySelector('[data-theme-toggle]');
         if (toggleButton) {
             this.updateToggleButton(toggleButton);
@@ -99,7 +68,6 @@ class ThemeToggle {
     }
 
     updateToggleButton(button) {
-
         const labels = {
             'auto': '🌓 Auto',
             'light': '☀️ Light',
@@ -111,7 +79,6 @@ class ThemeToggle {
     }
 
     getCurrentEffectiveTheme() {
-
         if (this.theme === 'auto') {
             return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }

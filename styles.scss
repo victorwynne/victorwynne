@@ -14,3 +14,12 @@
 @import "message";
 @import "tweet";
 @import "notice";
+
+// Theme Toggle Overrides
+html[data-theme="light"] {
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme="dark"] {
+  }
+}
