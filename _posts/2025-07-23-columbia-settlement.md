@@ -3,7 +3,7 @@ layout: post
 title: "The morons at Columbia University settled with the Trump administration"
 date: 2025-07-23 21:10
 categories: [Links]
-tags: [politics]
+tags: [idiocy, politics]
 link: https://president.columbia.edu/content/our-resolution-federal-government
 description: This capitulation by Columbia University to the Trump administration is a deeply disappointing and short-sighted maneuver that sacrifices academic freedom for financial expediency.
 ---
