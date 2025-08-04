@@ -4,7 +4,7 @@ title: "Why I keep writing in the AI era"
 date: 2025-08-04 19:30
 categories: [Articles]
 tags: [writing]
-description: Reflecting on how AI is changing the web for content creators, and why I still choose to write, share, and publish
+description: Reflecting on how AI is changing the web for content creators, and why I still choose to write, share, and publish.
 ---
 
 There’s been an overwhelming amount of discussion lately about AI and how it’s affecting people who write content on the web. It seems pretty apparent that AI companies are hoovering up everything we write and using it to give people quick answers without (clearly) sending them to the original sources. It’s certainly a real concern, especially for folks who depend on their content to pay the bills.
