@@ -95,7 +95,8 @@ Last Build: {{ site.time | date: '%R %Z' }} on {{ site.time | date_to_long_strin
 
 ## Contact
 
-Email: hello@victorwynne.com<br><br>
+Email: hello@victorwynne.com<br>
+Mastodon: @victor@typo.social<br><br>
 
 ## Privacy
 
