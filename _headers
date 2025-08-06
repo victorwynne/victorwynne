@@ -1,6 +1,7 @@
 /*
 Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 X-Frame-Options: DENY
+X-Clacks-Overhead: GNU Terry Pratchett
 X-Permitted-Cross-Domain-Policies: none
 X-Content-Type-Options: nosniff
 Cross-Origin-Embedder-Policy: "unsafe-none"
