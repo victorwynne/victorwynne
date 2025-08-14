@@ -7,7 +7,7 @@ tags: [genAI]
 description: A response to Thomas Dohmke’s misguided claims of generative AI developer reinvention that misunderstands the value of human judgment.
 ---
 
-*Update on August 11th*: Thomas Dohmke is [stepping down as CEO of GitHub](https://github.blog/news-insights/company-news/goodbye-github/).
+*Update on August 13th*: Thomas Dohmke is stepping down as CEO of GitHub. I wrote a [follow-up post](https://victorwynne.com/goodbye-github/) with my thoughts on the subject.
 
 I read [Thomas Dohmke’s piece about developers being “reinvented” through AI adoption](https://ashtom.github.io/developers-reinvented), and while his vision of transformation may appeal to some, something important is missing from this narrative. The piece paints a picture of inevitable change, but it glosses over a fundamental principle that has always driven great software development: the right to choose your own tools and approach.
 
