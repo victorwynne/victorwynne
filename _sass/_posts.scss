@@ -1,79 +1,80 @@
 /* === Posts and Pages === */
 
 figure {
-  margin-right: 0;
-  margin-left: 0;
-  margin-top: 1.5em;
-  margin-bottom: 2em;
+margin-right: 0;
+margin-left: 0;
+margin-top: 1.5em;
+margin-bottom: 2em;
 
-  & > :nth-last-child(2) {
-    margin-bottom: 0;
+& > :nth-last-child(2) {
+margin-bottom: 0;
 
-    & > :last-child {
-      margin-bottom: 0;
-    }
+& > :last-child {
+  margin-bottom: 0;
+  }
+}
+
+figcaption {
+color: #878787;
+margin-top: 0.4em;
+font-size: 0.8em;
+text-align: center;
+}
+
+&.screenshot {
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+
+figcaption {
+  margin-top: 1em;
+  margin-right: 2em;
+  margin-left: 2em;
+  }
+}
+
+&.attributed-quote {
+margin-left: 0;
+margin-right: 0;
+
+figcaption {
+  margin-top: 0.8em;
+  margin-left: 4em;
+
+  p {
+    display: inline;
   }
 
-  figcaption {
-    color: #878787;
-    margin-top: 0.4em;
-    font-size: 0.8em;
-    text-align: center;
+  &::first-letter {
+    margin-left: -2.5ex;
   }
+}
 
-  &.screenshot {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-
-    figcaption {
-      margin-top: 1em;
-      margin-right: 2em;
-      margin-left: 2em;
-    }
-  }
-
-  &.attributed-quote {
-    margin-left: 0;
-    margin-right: 0;
-
-    figcaption {
-      margin-top: 0.8em;
-      margin-left: 4em;
-
-      p {
-        display: inline;
-      }
-
-      &::first-letter {
-        margin-left: -2.5ex;
-      }
-    }
-  }
+}
 }
 
 @media screen and (max-width: 760px) {
-  figure {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
+figure {
+margin-left: 1em;
+margin-right: 1em;
+}
 }
 
 @media screen and (max-width: 500px) {
-  figure.screenshot figcaption {
-    margin-top: 0;
-  }
+figure.screenshot figcaption {
+margin-top: 0;
+}
 }
 
 /* === Page and Post Layout === */
 
 .page,
 .post {
-  margin-bottom: 1em;
+margin-bottom: 1em;
 
-  li + li {
-    margin-top: 0.5rem;
-  }
+li + li {
+margin-top: 0.5rem;
+}
 }
 
 /* === Titles === */
@@ -81,114 +82,77 @@ figure {
 .page-title,
 .post-title,
 .post-title a {
-  color: $text;
-
-  @media (prefers-color-scheme: light) {
-    color: $light-scheme-text;
-  }
+color: var(–text);
+transition: color 0.3s ease;
 }
 
 .page-title,
 .post-title {
-  margin-top: 0;
-  margin-bottom: 0;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 /* === Meta Data Below Title === */
 
 .post-date {
-  display: block;
-  margin-top: -0.4rem;
-  margin-bottom: 0rem;
-  font-variant: all-petite-caps;
-  font-size: 150%;
-  color: $meta;
-
-  @media (prefers-color-scheme: light) {
-    color: $light-scheme-meta;
-  }
+display: block;
+margin-top: -0.4rem;
+margin-bottom: 0rem;
+font-variant: all-petite-caps;
+font-size: 150%;
+color: var(–meta);
+transition: color 0.3s ease;
 }
 
 /* === Permalink === */
 
 .permalink {
-  display: block;
-  margin-top: -1rem;
-  margin-bottom: 1.5rem;
-  color: $accent;
-
-  @media (prefers-color-scheme: light) {
-    color: $light-scheme-accent;
-  }
+display: block;
+margin-top: -1rem;
+margin-bottom: 1.5rem;
+color: var(–accent);
+transition: color 0.3s ease;
 }
 
 /* === Source Attribution === */
 
 .source {
-  display: block;
-  margin-top: -0.8rem;
-  margin-bottom: 1.5rem;
-  color: $meta;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  font-variant: all-petite-caps;
-  font-size: 150%;
-
-  @media (prefers-color-scheme: light) {
-    color: $light-scheme-meta;
-  }
+display: block;
+margin-top: -0.8rem;
+margin-bottom: 1.5rem;
+color: var(–meta);
+width: 100%;
+overflow: hidden;
+white-space: nowrap;
+font-variant: all-petite-caps;
+font-size: 150%;
+transition: color 0.3s ease;
 }
 
 /* === Post Content === */
 
 .post-content {
-  margin-bottom: 2.7rem;
+margin-bottom: 2.7rem;
 }
 
 /* === Tag List === */
 
 .tag-list {
-  a:link {
-    color: $accent;
-    background-color: $tag-bg;
-    display: inline-block;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1.75px solid $tag-border;
-    border-radius: 0.5em;
-    margin-bottom: 0.7rem;
-    margin-right: 0.1rem;
-    font-size: 100%;
-    text-decoration: none;
-
-    @media (prefers-color-scheme: light) {
-      color: $light-scheme-accent;
-      background-color: $light-scheme-tag-bg;
-      border: 1.75px solid $light-scheme-tag-border;
-    }
-  }
-
-  a:visited {
-    color: $accent;
-    background-color: $tag-bg;
-    display: inline-block;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1.75px solid $tag-border;
-    border-radius: 0.5em;
-    margin-bottom: 0.7rem;
-    margin-right: 0.1rem;
-    font-size: 100%;
-
-    @media (prefers-color-scheme: light) {
-      color: $light-scheme-accent;
-      background-color: $light-scheme-tag-bg;
-      border: 1.75px solid $light-scheme-tag-border;
-    }
-  }
+a:link,
+a:visited {
+color: var(–accent);
+background-color: var(–tag-bg);
+display: inline-block;
+padding-top: 1px;
+padding-bottom: 1px;
+padding-left: 5px;
+padding-right: 5px;
+border: 1.75px solid var(–tag-border);
+border-radius: 0.5em;
+margin-bottom: 0.7rem;
+margin-right: 0.1rem;
+font-size: 100%;
+text-decoration: none;
+transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
 }

@@ -187,10 +187,61 @@ gtag('config', 'G-26NWWZ94DD');
       <p>
       Made with love in New York<br>
       <a href="https://typo.social/@victor">Follow me on Mastodon</a><br>
-      © 2019 - {{ "now" | date: "%Y" }}
+      © 2019 - {{ "now" | date: "%Y" }}<br>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <div class="toggle-knob"></div>
+</button>
       </p>
     </footer>
   </div>
+  
+<script>
+const themeToggle = document.getElementById('themeToggle');
+
+if (themeToggle) {
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+
+  let isDarkMode;
+  if (savedTheme) {
+    isDarkMode = savedTheme === 'dark';
+  } else {
+    isDarkMode = !window.matchMedia('(prefers-color-scheme: light)').matches;
+  }
+
+  if (isDarkMode) {
+    body.setAttribute('data-theme', 'dark');
+    themeToggle.classList.add('active');
+  } else {
+    body.setAttribute('data-theme', 'light');
+    themeToggle.classList.remove('active');
+  }
+
+  function toggleTheme() {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    body.setAttribute('data-theme', newTheme);
+    
+    if (newTheme === 'dark') {
+      themeToggle.classList.add('active');
+    } else {
+      themeToggle.classList.remove('active');
+    }
+    
+    localStorage.setItem('theme', newTheme);
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
+
+  themeToggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleTheme();
+    }
+  });
+}
+</script>
 
 </body>
 </html>
