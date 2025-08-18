@@ -29,7 +29,7 @@ body {
   background-color: $bg;
 
   ::selection {
-    background: #ff453a;
+    background: $accent;
   }
 
   @media (prefers-color-scheme: light) {
@@ -37,7 +37,7 @@ body {
     background-color: $light-scheme-bg;
 
     ::selection {
-      background: #2eb1c6;
+      background: $light-scheme-accent;
     }
   }
 }
