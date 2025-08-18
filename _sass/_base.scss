@@ -2,97 +2,117 @@
 
 * {
   box-sizing: border-box;
-  }
+}
 
 html,
 body {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* === Root Typography and Layout === */
 
 html {
-font-family: $root-font-family;
-font-size: $root-font-size;
-line-height: $root-line-height;
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
 
-@media (min-width: $large-breakpoint) {
-font-size: $large-font-size;
-}
+  @media (min-width: $large-breakpoint) {
+    font-size: $large-font-size;
+  }
 }
 
 /* === Body Styles and Theme Handling === */
 
 body {
-color: var(–text);
-background-color: var(–bg);
-transition: color 0.3s ease, background-color 0.3s ease;
+  color: $text;
+  background-color: $bg;
 
-::selection {
-background: var(–accent);
-}
+  ::selection {
+    background: $accent;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-text;
+    background-color: $light-scheme-bg;
+
+    ::selection {
+      background: $light-scheme-accent;
+    }
+  }
 }
 
 /* === Base Elements === */
 
 a {
-color: var(–accent);
-text-decoration: underline;
-text-underline-offset: 0.325em;
-transition: color 0.3s ease;
+  color: $accent;
+  text-decoration: underline;
+  text-underline-offset: 0.325em;
 
-&:hover,
-&:focus {
-text-decoration: underline;
-}
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-accent;
+  }
 
-strong {
-color: inherit;
-}
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  strong {
+    color: inherit;
+  }
 }
 
 img {
-display: block;
-max-width: 100%;
-margin: 0 0 1rem;
-border-radius: 5px;
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 5px;
 }
 
 /* === Tables === */
 
 table {
-margin-bottom: 1rem;
-width: 100%;
-border: 1.5px solid var(–header);
-border-collapse: collapse;
-transition: border-color 0.3s ease;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1.5px solid $header;
+  border-collapse: collapse;
+
+  @media (prefers-color-scheme: light) {
+    border: 1.5px solid $light-scheme-header;
+  }
 }
 
 td,
 th {
-padding: .25rem .5rem;
-border: 1px dashed var(–header);
-transition: border-color 0.3s ease, background-color 0.3s ease;
+  padding: .25rem .5rem;
+  border: 1px dashed $header;
+
+  @media (prefers-color-scheme: light) {
+    border: 1px dashed $light-scheme-header;
+  }
 }
 
 th {
-text-align: left;
+  text-align: left;
 }
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-background-color: var(–bg);
+  background-color: $bg;
+
+  @media (prefers-color-scheme: light) {
+    background-color: $light-scheme-bg;
+  }
 }
 
 /* === Navigation Links === */
 
 nav a {
-text-decoration: none;
-transition: color 0.3s ease;
+  text-decoration: none;
 
-&:hover,
-&:focus {
-text-decoration: none;
-}
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }

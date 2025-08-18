@@ -6,62 +6,71 @@ h3,
 h4,
 h5,
 h6 {
-margin-bottom: 0.5rem;
-font-weight: 600;
-line-height: 1.2;
-text-rendering: optimizeLegibility;
-color: var(–header);
-position: relative;
-text-decoration: none;
-transition: color 0.3s ease;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  color: $header;
+  position: relative;
+  text-decoration: none;
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-header;
+  }
 }
 
 h1 {
-font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-margin-top: 1rem;
-font-size: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-margin-top: 1rem;
-margin-bottom: 1rem;
-font-size: 1.1rem;
-color: var(–text);
-transition: color 0.3s ease;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: $text;
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-text;
+  }
 }
 
 h4 {
-margin-top: 1.5rem;
-font-size: 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
 
-&::before {
-content: "#";
-color: var(–header-before);
-left: -1em;
-top: 0;
-position: absolute;
-transition: color 0.3s ease;
-}
+  &::before {
+    content: "#";
+    color: $header-before;
+    left: -1em;
+    top: 0;
+    position: absolute;
+
+    @media (prefers-color-scheme: light) {
+      color: $light-scheme-header-before;
+    }
+  }
 }
 
 h5,
 h6 {
-margin-top: 1rem;
-font-size: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 /* === Paragraphs === */
 
 p {
-margin-top: 0;
-margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .info-line {
-margin-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
 }
 
 /* === Lists and Descriptions === */
@@ -69,167 +78,201 @@ margin-bottom: 1.4rem;
 ul,
 ol,
 dl {
-margin-top: 0;
+  margin-top: 0;
 }
 
 dt {
-font-weight: bold;
+  font-weight: bold;
 }
 
 dd {
-margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* === Horizontal Rules === */
 
 hr {
-position: relative;
-border: 0;
-margin: 2em auto;
-border-top: 0.85px solid var(–blockquote);
-border-bottom: 0.85px solid var(–blockquote);
-transition: border-color 0.3s ease;
+  position: relative;
+  border: 0;
+  margin: 2em auto;
+  border-top: 0.85px solid $blockquote;
+  border-bottom: 0.85px solid $blockquote;
+
+  @media (prefers-color-scheme: light) {
+    border-top: 0.85px solid $light-scheme-blockquote;
+    border-bottom: 0.85px solid $light-scheme-blockquote;
+  }
 }
 
 /* === Year Separator === */
 
 .year-separator {
-border: none;
-height: 1px;
-margin-top: 1.6em;
-margin-bottom: 5em;
-margin-left: auto;
-margin-right: auto;
-background: transparent;
-text-align: center;
-overflow: visible;
+  border: none;
+  height: 1px;
+  margin-top: 1.6em;
+  margin-bottom: 5em;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  text-align: center;
+  overflow: visible;
 
-&::before {
-content: "• • •";
-display: block;
-font-size: 2em;
-margin-top: 1.6em;
-margin-bottom: 5em;
-margin-left: auto;
-margin-right: auto;
-letter-spacing: 0.2em;
-color: var(–blockquote);
-line-height: 1;
-transition: color 0.3s ease;
-}
+  &::before {
+    content: "• • •";
+    display: block;
+    font-size: 2em;
+    margin-top: 1.6em;
+    margin-bottom: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.2em;
+    color: $blockquote;
+    line-height: 1;
+
+    @media (prefers-color-scheme: light) {
+      color: $light-scheme-blockquote;
+    }
+  }
 }
 
 /* === Abbreviations === */
 
 abbr {
-font-size: 85%;
-font-weight: bold;
-opacity: 0.5;
-color: var(–text);
-text-transform: uppercase;
-transition: color 0.3s ease;
+  font-size: 85%;
+  font-weight: bold;
+  opacity: 0.5;
+  color: $text;
+  text-transform: uppercase;
 
-&[title] {
-cursor: help;
-border-bottom: 1px dotted #e5e5e5;
-}
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-text;
+  }
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
+  }
 }
 
 /* === Link Arrow === */
 
 span.link-arrow {
-color: var(–element);
-transition: color 0.3s ease;
+  color: $element;
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-element;
+  }
 }
 
 /* === Blockquotes === */
 
 blockquote {
-width: 100%;
-background-color: var(–blockquote-bg);
-padding: 20px 20px 19px 26px;
-margin: 20px 0;
-font-size: 92%;
-position: relative;
-border-top-left-radius: 2em;
-border-top-right-radius: 2em;
-border-bottom-right-radius: 2em;
-border-bottom-left-radius: 0.2em;
-transition: background-color 0.3s ease;
+  width: 100%;
+  background-color: $blockquote-bg;
+  padding: 20px 20px 19px 26px;
+  margin: 20px 0;
+  font-size: 92%;
+  position: relative;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: 0.2em;
 
-p:last-child {
-margin-bottom: 0;
-}
+  @media (prefers-color-scheme: light) {
+    background-color: $light-scheme-blockquote-bg;
+  }
 
-@media (min-width: 30em) {
-padding-right: 1.5rem;
-padding-left: 1.5rem;
-}
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 30em) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
 }
 
 /* === Figures === */
 
 figure {
-margin: 0;
+  margin: 0;
 }
 
 /* === Mark Highlighting === */
 
 mark {
-background: var(–accent);
-color: var(–text);
-padding: 2px 2px;
-transition: background-color 0.3s ease, color 0.3s ease;
+  background: $accent;
+  color: $light-scheme-text;
+  padding: 2px 2px;
+
+  @media (prefers-color-scheme: light) {
+    background: $light-scheme-accent;
+    color: $text;
+  }
 }
 
 /* === Footnotes === */
 
 a[href^="#fn:"] {
-display: inline-block;
-position: relative;
-font-size: 95%;
-font-weight: bold;
-min-width: 45px;
-margin: 0 0.2em 0 0.2em;
-text-align: center;
-color: var(–accent);
-background: var(–blockquote-bg);
-border: 1.5px solid var(–blockquote);
-border-radius: 1em;
-vertical-align: middle;
-text-decoration: none;
-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  position: relative;
+  font-size: 95%;
+  font-weight: bold;
+  min-width: 45px;
+  margin: 0 0.2em 0 0.2em;
+  text-align: center;
+  color: $accent;
+  background: $blockquote-bg;
+  border: 1.5px solid $blockquote;
+  border-radius: 1em;
+  vertical-align: middle;
+  text-decoration: none;
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-accent;
+    background: $light-scheme-blockquote-bg;
+    border: 1.5px solid $light-scheme-blockquote;
+  }
 }
 
 a[href^="#fnref:"] {
-display: inline-block;
-margin-left: 0.1rem;
-font-weight: bold;
-padding: 0.1em 0.1em 0.1em;
+  display: inline-block;
+  margin-left: 0.1rem;
+  font-weight: bold;
+  padding: 0.1em 0.1em 0.1em;
 }
 
 .footnotes {
-margin-top: 2rem;
-font-size: 80%;
+  margin-top: 2rem;
+  font-size: 80%;
 
-:target {
-padding: 6px;
-border: solid 1.5px var(–blockquote);
-transition: border-color 0.3s ease;
-}
+  :target {
+    padding: 6px;
+    border: solid 1.5px $blockquote;
+
+    @media (prefers-color-scheme: light) {
+      border: solid 1.5px $light-scheme-blockquote;
+    }
+  }
 }
 
 .reversefootnote {
-text-decoration: none;
-color: var(–accent);
-transition: color 0.3s ease;
+  text-decoration: none;
+  color: $accent;
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-accent;
+  }
 }
 
 /* === Custom Type === */
 
 .lead {
-font-size: 1.25rem;
-font-weight: 300;
-color: var(–text);
-transition: color 0.3s ease;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: $text;
+
+  @media (prefers-color-scheme: light) {
+    color: $light-scheme-text;
+  }
 }
