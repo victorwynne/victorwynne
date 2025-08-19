@@ -1,7 +1,7 @@
 ---
 layout: post
-title: “MSNBC’s odd name change decision”
-date: 2025-08-18 20:52
+title: "MSNBC’s odd name change decision"
+date: 2025-08-19 20:55
 categories: [Links]
 tags: [business, idiocy]
 link: https://variety.com/2025/tv/news/msnbc-new-name-ms-now-1236491621/
