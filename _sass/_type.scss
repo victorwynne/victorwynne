@@ -133,11 +133,11 @@ hr {
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 0.2em;
-    color: $blockquote;
+    color: $accent;
     line-height: 1;
 
     @media (prefers-color-scheme: light) {
-      color: $light-scheme-blockquote;
+      color: $light-scheme-accent;
     }
   }
 }
