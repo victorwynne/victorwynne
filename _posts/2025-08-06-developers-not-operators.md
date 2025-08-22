@@ -4,6 +4,7 @@ title: "Developers, not operators"
 date: 2025-08-06 15:45
 categories: [Articles]
 tags: [genAI]
+featured: true
 description: A response to Thomas Dohmke’s misguided claims of generative AI developer reinvention that misunderstands the value of human judgment.
 ---
 
