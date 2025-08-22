@@ -3,14 +3,47 @@ layout: default
 title: Home
 ---
 
+<!-- Featured Posts Section -->
+
+{% assign featured_posts = site.posts | where: "featured", true %}
+{% if featured_posts.size > 0 %}
+
+<div class="featured-posts">
+  <h2>Featured Posts</h2>
+
+{% for post in featured_posts limit:3 %}
+
+  <nav>
+  <article class="post featured">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">{{ post.title | smartify }}</a>
+    </h2>
+
+<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%A" }}, {{ post.date | date_to_long_string: "ordinal", "US" }}
+</time>
+
+<br>
+  </article>
+  </nav>
+  {% endfor %}
+
+</div>
+
+<hr>
+{% endif %}
+
+<!-- Recent Posts Section -->
+
 <div class="posts">
+  <h2>Recent Posts</h2>
 
 {% for post in site.posts limit:19 %}
-<nav>
-<article class="post">
+
+  <nav>
+  <article class="post">
 
 <h2 class="post-title">
-<a href="{{ post.url }}">{{ post.title | smartify }}</a>
+  <a href="{{ post.url }}">{{ post.title | smartify }}</a>
 </h2>
 
 <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%A" }}, {{ post.date | date_to_long_string: "ordinal", "US" }}
@@ -18,9 +51,9 @@ title: Home
 
 <br>
 
-</article>
-</nav>
-{% endfor %}
+  </article>
+  </nav>
+  {% endfor %}
 
 </div>
 
