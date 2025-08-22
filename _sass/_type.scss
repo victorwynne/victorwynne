@@ -28,6 +28,13 @@ h2 {
   font-size: 1.5rem;
 }
 
+.featured-posts > h2,
+.recent-posts > h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;

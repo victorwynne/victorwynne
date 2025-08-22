@@ -9,7 +9,7 @@ title: Home
 {% if featured_posts.size > 0 %}
 
 <div class="featured-posts">
-  <h2>Featured Posts</h2>
+  <h2 class="featured-posts">Featured Posts</h2>
 
 {% for post in featured_posts limit:3 %}
 
@@ -22,7 +22,6 @@ title: Home
 <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%A" }}, {{ post.date | date_to_long_string: "ordinal", "US" }}
 </time>
 
-<br>
   </article>
   </nav>
   {% endfor %}
@@ -35,7 +34,7 @@ title: Home
 <!-- Recent Posts Section -->
 
 <div class="posts">
-  <h2>Recent Posts</h2>
+  <h2 class="recent-posts">Recent Posts</h2>
 
 {% for post in site.posts limit:19 %}
 
