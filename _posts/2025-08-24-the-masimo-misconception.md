@@ -1,0 +1,26 @@
+---
+layout: post
+title: "The Masimo misconception"
+date: 2025-08-24 18:25
+categories: [Articles]
+tags: [apple, business]
+description: For decades Masimo has been developing and manufacturing medical devices used in hospitals globally. The evidence clearly proves that the patent troll label doesn’t apply in their lawsuit against Apple.
+---
+
+When Apple [recently announced](https://www.apple.com/newsroom/2025/08/an-update-on-blood-oxygen-for-apple-watch-in-the-us/) a workaround for the [blood oxygen sensor ban](https://www.masimo.com/media/united-states-international-trade-commission-issues-exclusion-order-for-infringing-apple-watches-finding-that-apple-violated-u-s-trade-laws) affecting Apple Watch functionality in the United States, some observers continued to dismiss Masimo as [nothing more than a patent troll](https://daringfireball.net/2025/08/apple_workaround_blood_oxygen_ban) seeking to profit from lawsuits rather than innovation. This characterization misses the mark entirely, and ignores decades of genuine medical breakthroughs and life-saving technology that Masimo has brought to hospitals worldwide.
+
+Founded in 1989 by electrical engineer Joe Kiani, Masimo has spent over three decades developing technologies that address real problems in patient monitoring. The company’s flagship innovation, [Signal Extraction Technology pulse oximetry](https://pubmed.ncbi.nlm.nih.gov/12580205/), represents a substantial advancement over conventional pulse oximeters that struggled with accuracy during patient movement, poor tissue perfusion, excessive ambient light, and electrical interference from surgical equipment.
+
+Walk into any major hospital today and you will likely encounter Masimo devices monitoring patients in intensive care units, operating rooms, and recovery areas. Their pulse oximetry technology has become a standard tool in medical settings precisely because it solved accuracy problems that healthcare providers faced daily. Leading medical institutions rely on Masimo’s monitoring technology for critical patient care, demonstrating the practical value of their innovations rather than mere patent portfolio management.
+
+The widespread adoption of Masimo’s technology in healthcare settings directly contradicts the patent troll narrative. Companies that exist solely to monetize patents do not invest in manufacturing, distribution networks, regulatory compliance, and ongoing product support. Masimo maintains all of these business functions because they actually sell physical devices that healthcare providers use to monitor real patients.
+
+Patent trolls typically acquire patents without developing products or contributing to their underlying technologies. Masimo presents a different picture entirely. The company is publicly traded, maintains manufacturing facilities, employs engineers and clinical researchers, and it operates global sales and support organizations. Their business model centers on creating and selling actual medical devices that healthcare providers use daily.
+
+The timing criticism regarding Masimo’s smartwatch development deserves scrutiny as well. While they did not have a consumer smartwatch when filing their complaint, this ignores their extensive work in miniaturizing hospital-grade monitoring technology. Medical device development follows a different timeline than consumer electronics. It requires extensive regulatory validation, clinical trials, and safety testing, meaning patent protection often precedes commercial availability by years. This serves a legitimate purpose in protecting innovations that require substantial investment to bring to market.
+
+The two patents in question will expire in August 2028, meaning Masimo will have held them for their full term rather than engaging in the perpetual lawsuits typical of patent trolls. Companies focused purely on patent monetization often acquire patents near expiration specifically for last-minute licensing demands. Masimo’s approach suggests different priorities focused on protecting technologies they actually developed and commercialized in healthcare settings.
+
+The Apple case represents a legitimate dispute between two companies with different approaches to health monitoring technology. Apple’s implementation of blood oxygen monitoring in consumer devices intersects with technology that Masimo spent years developing for medical applications. Rather than simply demanding licensing fees, Masimo has continued developing their own consumer products while defending their intellectual property through proper legal channels.
+
+Patent trolls often target multiple companies across various industries with broadly written patents of questionable validity. Masimo’s focused approach to protecting specific pulse oximetry innovations developed for their core medical device business suggests a company defending legitimate intellectual property rather than pursuing opportunistic legal strategies. While patent abuse certainly exists in technology industries, the evidence suggests Masimo represents something different: a medical technology company defending innovations they actually developed and brought to market. They deserve to be judged on their decades of medical contributions, not dismissed with oversimplified labels.
