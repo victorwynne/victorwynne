@@ -4,13 +4,15 @@ permalink: /resume/
 title: Resume
 ---
 
+My resume is also available for download in [PDF format](https://cloud.victorwynne.com/resume.pdf).<br>
+
 ## Victor Wynne Johnson
 **Email:** hello@victorwynne.com<br>
 **Phone:** (609) 674-3836
 <br>
 
 ## Objective
-Adaptable and strategic problem-solver with a proven track record of applying diverse skills to solve complex business challenges. Possessing hands-on experience in both operational management—specifically within a political research call center—and a strong technical background in full-stack web development and server administration. Eager to contribute my multi-faceted expertise and leadership to a forward-thinking organization.
+Adaptable and strategic problem-solver with a proven track record of applying diverse skills to solve complex challenges. Possessing hands-on experience in operational management, as well as a strong technical background in full-stack web development and server administration. Eager to contribute my expertise to a forward-thinking organization.
 <br>
 
 ## Education
